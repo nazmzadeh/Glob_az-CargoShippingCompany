@@ -38,8 +38,32 @@
     margin-right: 10px;
 }
 
+//bottom part
+
+.bottomHeader {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottomHeader img {
+    position: relative;
+    left: -40px;
+}
+
 .headerMenu {
-    list-style: none;
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+.headerList {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+}
+
+.headerList a {
+    font-family: 'SEGUISB', sans-serif;
+    font-size: 0.93333rem;
+    font-weight: 600;
+    color: #363636;
 }

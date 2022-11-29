@@ -1,7 +1,8 @@
 import "./Header.scss";
 import phone from "./phone.svg";
 import logo from "./logo.png";
-import { Link } from 'react-router-dom';
+
+
 
 export const Header = () => {
   return (
@@ -37,11 +38,17 @@ export const Header = () => {
         </div>
       </div>
       <div className="bottomHeader">
-        <link href="#">
+        <a href="#">
           <img src={logo} alt="" />
-        </link>
+        </a>
         <div className="headerMenu">
-          <link rel="stylesheet" href="" />
+        <ul className="headerList">
+          <li><a href="/tariff.html" title="">Tariflər</a></li>
+          <li><a href="/store.html" title="">Mağazalar</a></li>
+          <li><a href="/faq.html" title="">Faq</a></li>
+          <li><a href="/contact.html" title="">Əlaqə</a></li>
+          <li><a href="/az/menu/maxfilik-32.html" title="">Məxfilik</a></li>
+        </ul>
         </div>
       </div>
       
