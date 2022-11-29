@@ -38,10 +38,10 @@ export const Header = () => {
         </div>
       </div>
       <div className="bottomHeader">
-        <a href="#">
+        <a href="#/">
           <img src={logo} alt="" />
         </a>
-        <div className="headerMenu">
+        <div className="headerMenu desktopOnly">
         <ul className="headerList">
           <li><a href="/tariff.html" title="">Tariflər</a></li>
           <li><a href="/store.html" title="">Mağazalar</a></li>
