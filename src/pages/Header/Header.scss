@@ -1,2 +1,45 @@
 @import '../../variables';
 @import '../../mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+.header a {
+    color: #707070;
+    text-decoration: none;
+}
+
+.topHeader {
+    display: flex;
+    background: #ebf0f4;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.headerTopLeft {
+    display: flex;
+}
+
+.langOpt {
+    margin-right: 50px;
+    border: 0px;
+    background: #ebf0f4;
+}
+
+.header-phone {
+    display: flex;
+    gap: 5px;
+}
+
+.random {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.headerMenu {
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+}
