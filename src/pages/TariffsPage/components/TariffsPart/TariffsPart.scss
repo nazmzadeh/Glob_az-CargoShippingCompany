@@ -106,6 +106,12 @@ th {
   vertical-align: middle;
   border-style: none;
 }
+.breadcrumb {
+  padding-top: 2.13333rem;
+}
+.breadcrumb ul {
+  padding: 0;
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
