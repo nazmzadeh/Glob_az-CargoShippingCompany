@@ -42,38 +42,44 @@ export const Header = () => {
       </div>
 
       <div className="bottomHeader">
-        <a href="#/">
-          <img src={logo} alt="" />
-        </a>
-        <div className="headerMenu desktopOnly">
-          <ul className="headerList">
-            <li>
-              <Link to={"tarifler"}>Tarfiler</Link>
-              {/* <a href="/tariff.html" title="">
+        <div className="container">
+          <div className="header-btm-inside">
+            <div className="header-logo">
+              <a href="#/">
+                <img src={logo} alt="" />
+              </a>
+            </div>
+            <div className="headerMenu desktopOnly">
+              <ul className="headerList">
+                <li>
+                  <Link to={"tarifler"}>Tarfiler</Link>
+                  {/* <a href="/tariff.html" title="">
                 Tariflər
               </a> */}
-            </li>
-            <li>
-              <a href="/store.html" title="">
-                Mağazalar
-              </a>
-            </li>
-            <li>
-              <a href="/faq.html" title="">
-                Faq
-              </a>
-            </li>
-            <li>
-              <a href="/contact.html" title="">
-                Əlaqə
-              </a>
-            </li>
-            <li>
-              <a href="/az/menu/maxfilik-32.html" title="">
-                Məxfilik
-              </a>
-            </li>
-          </ul>
+                </li>
+                <li>
+                  <a href="/store.html" title="">
+                    Mağazalar
+                  </a>
+                </li>
+                <li>
+                  <a href="/faq.html" title="">
+                    Faq
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact.html" title="">
+                    Əlaqə
+                  </a>
+                </li>
+                <li>
+                  <a href="/az/menu/maxfilik-32.html" title="">
+                    Məxfilik
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>

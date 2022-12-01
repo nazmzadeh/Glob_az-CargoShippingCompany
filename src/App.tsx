@@ -30,6 +30,7 @@ function App() {
             <Route path="tasks" element={<DashboardTasks />} />
           </Route> */}
           <Route path="tarifler" element={<Tariffs />} />
+          <Route path="Mağazalar" element={<Stores />} />
         </Routes>
         <Footer />
       </div>
