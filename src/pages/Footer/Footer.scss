@@ -1,2 +1,16 @@
-@import '../../variables';
-@import '../../mixins';
+@import "../../variables";
+@import "../../mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+.header a {
+  color: #707070;
+  text-decoration: none;
+}
+
+.header-phone {
+  display: flex;
+  gap: 5px;
+}
