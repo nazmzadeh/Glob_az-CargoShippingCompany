@@ -1,69 +1,108 @@
-@import '../../variables';
-@import '../../mixins';
+@import "../../variables";
+@import "../../mixins";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .header a {
-    color: #707070;
-    text-decoration: none;
+  color: #707070;
+  text-decoration: none;
 }
 
 .topHeader {
-    display: flex;
-    background: #ebf0f4;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 15px;
+  display: flex;
+  background: #ebf0f4;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.header-top-inside {
+  justify-content: space-between;
+  display: flex;
 }
 
 .headerTopLeft {
-    display: flex;
+  display: flex;
 }
 
 .langOpt {
-    margin-right: 50px;
-    border: 0px;
-    background: #ebf0f4;
+  margin-right: 50px;
+  border: 0px;
+  background: #ebf0f4;
 }
 
 .header-phone {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 .random {
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 //bottom part
 
 .bottomHeader {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
-.bottomHeader img {
-    position: relative;
-    left: -40px;
+.header-btm-inside {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.header-logo {
+  position: relative;
+  left: -40px;
 }
 
 .headerMenu {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .headerList {
-    list-style-type: none;
-    display: flex;
-    gap: 25px;
+  list-style-type: none;
+  display: flex;
+  gap: 25px;
 }
 
 .headerList a {
-    font-family: 'SEGUISB', sans-serif;
-    font-size: 0.93333rem;
-    font-weight: 600;
-    color: #363636;
+  font-family: "SEGUISB", sans-serif;
+  font-size: 0.93333rem;
+  font-weight: 600;
+  color: #363636;
+}
+
+.header-inside {
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 5%);
+}
+
+.container {
+  max-width: 1300px !important;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
 }
