@@ -1,10 +1,10 @@
-import './Tariffs.scss'
-import { Shops } from './components/TariffsPart/TariffsPart';
+import "./Tariffs.scss";
+import { Shops } from "./components/TariffsPart/TariffsPart";
 
-export const Tariffs=()=>{
-    return(
-      <>
-      <Shops/>
-      </>
-    );
-  }
+export const Tariffs = () => {
+  return (
+    <>
+      <Shops />
+    </>
+  );
+};
