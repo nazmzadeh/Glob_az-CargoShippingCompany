@@ -1,0 +1,13 @@
+.Container {
+  padding: 0;
+  width: 90%;
+  // text-align: center;
+  font-size: 3.7rem;
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  .Container {
+    font-size: 2.7rem;
+    text-align: center;
+  }
+}

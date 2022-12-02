@@ -15,20 +15,21 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        {/* <main>
+        <main>
         <Home />
-        <Tariffs />
+        {/* <Tariffs />
         
         <Stores />
         <Faq />
         <Contact />
-        <Confidentiality />
-      </main> */}
+        <Confidentiality /> */}
+      </main>
         <Routes>
           {/* <Route path="/" element={<Dashboard />}>
             <Route path="messages" element={<DashboardMessages />} />
             <Route path="tasks" element={<DashboardTasks />} />
           </Route> */}
+          
           <Route path="tarifler" element={<Tariffs />} />
           <Route path="Mağazalar" element={<Stores />} />
         </Routes>
