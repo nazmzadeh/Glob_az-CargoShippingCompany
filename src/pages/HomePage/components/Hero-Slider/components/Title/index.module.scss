@@ -1,13 +1,20 @@
+@import '../../../../../../variables';
+@import '../../../../../../mixins';
 .Container {
   padding: 0;
-  width: 90%;
-  // text-align: center;
-  font-size: 3.7rem;
+  font-size: 3.6rem;
   color: white;
+  font-family: $second_font;
 }
-@media screen and (max-width: 900px) {
-  .Container {
+// @media screen and (max-width: 900px) {
+//   .Container {
+//     font-size: 2.7rem;
+//     text-align: center;
+//   }
+// }
+@media screen and (max-width: 990px) {
+  .Container{
     font-size: 2.7rem;
-    text-align: center;
+    
   }
 }

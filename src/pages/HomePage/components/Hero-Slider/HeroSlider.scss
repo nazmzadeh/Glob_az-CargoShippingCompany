@@ -1,13 +1,15 @@
+@import '../../../../variables';
+@import '../../../../mixins';
 #hero{
-    // background-color: linear-gradient(#ff7700, #ffa600);
     text-align: left;
+    font-family: $main_font;
     .hero-slider-wrapper{
-        max-height: 700px !important; 
+        max-height: 670px !important; 
 
     }
     img{
-        width: 770px;
-        height: 440px;
+        width: 700px;
+        height: 415px;
     }
     .slider_caption{
         margin-top: 30px;
@@ -17,8 +19,23 @@
         }
 
     }
+
+    
    
 }
+@media screen and (max-width: 990px) {
+    #hero{
+    
+        .slider_caption{
+            margin: 0 auto;
+            margin-top: 30px;
+            a{
+                font-size: .7rem;
+            }
+        }
+      
+    }
+  }
 @media screen and (max-width: 900px) {
     #hero{
         img{

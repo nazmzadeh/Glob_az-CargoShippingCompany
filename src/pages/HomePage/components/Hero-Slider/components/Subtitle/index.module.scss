@@ -1,7 +1,6 @@
 .Container {
     margin: 24px auto 0;
     padding: 0;
-    // width: 80%;
     font-size: 1.6rem;
     text-shadow: 0 3px 6px rgb(0 0 0 / 16%);
     letter-spacing: 1.2px;
@@ -9,10 +8,9 @@
     font-weight: 100;
 
   }
-@media screen and (max-width: 900px) {
-  .Container{
-    font-size: 1.2rem;
-    text-align: center;
-     
+  @media screen and (max-width: 990px) {
+    .Container{
+      font-size: 1.3rem;
+      
+    }
   }
-}
