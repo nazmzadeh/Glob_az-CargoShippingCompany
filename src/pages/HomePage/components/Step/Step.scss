@@ -1,0 +1,19 @@
+.flex-container{
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    img:not(.main_img){
+        height: 70px;
+        width: 70px;
+    }
+    .step{
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+        .text{
+            max-width: 480px;
+        }
+    }
+}
