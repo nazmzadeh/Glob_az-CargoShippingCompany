@@ -4,11 +4,24 @@
 * {
   box-sizing: border-box;
 }
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
 
 .footer {
   width: 100%;
   padding: 4.66667rem 0 0;
   background: #ebf0f4;
+  text-align: start;
 }
 
 .footer-container {
@@ -66,7 +79,7 @@
   color: #707070;
 }
 
-a {
+a :hover {
   color: #ffa600;
   text-decoration: none;
   background-color: transparent;
@@ -75,4 +88,141 @@ a {
 .footer-contact ul {
   margin: 0;
   padding: 0;
+}
+
+.footer-menu h4 {
+  font-family: "SEGUISB", sans-serif;
+  font-size: 1.06667rem;
+  color: #363636;
+  margin-bottom: 2rem;
+  margin-top: 0.93333rem;
+}
+
+.footer-menu ul {
+  padding: 0;
+}
+
+.footer-menu li {
+  list-style: none;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+//3rd div
+.subscribe-title {
+  font-family: "SEGUISB", sans-serif;
+  font-size: 1.06667rem;
+  color: #363636;
+  margin-bottom: 0.33333rem;
+  margin-top: 0.93333rem;
+}
+
+.subscribe-desc {
+  font-size: 0.93333rem;
+  color: #707070;
+}
+
+.subscribe-form {
+  width: 100%;
+  height: 3.33333rem;
+  position: relative;
+}
+
+.subscribe .form-group {
+  height: 3.4rem;
+}
+
+.subscribe-input {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: solid 1px #e0e0e0;
+  border-radius: 3px;
+  padding-left: 1.4rem;
+  outline: none;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+.subscribe-btn {
+  font-family: "SEGUISB", sans-serif;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6.66667rem;
+  height: 100%;
+  background: #ffa600;
+  color: #ffffff;
+  border: none;
+  outline: none !important;
+  transition: all 0.2s;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+.footer-social {
+  margin-top: 1.66667rem;
+}
+
+.footer-social ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social li:not(:last-of-type) {
+  margin-right: 1.66667rem;
+}
+
+.footer-social a {
+  display: block;
+  width: 2.33333rem;
+  height: 2.33333rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+  -webkit-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+  -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  -ms-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  transition: all 0.2s;
+}
+
+.footer-social-fa {
+  background: #ffffff url(./fb.svg) no-repeat center;
+}
+
+.footer-social-ins {
+  background: #ffffff url(./ins.svg) no-repeat center;
+}
+
+.footer-social-wp {
+  background: #ffffff url(./wp.svg) no-repeat center;
+}
+
+.footer-social-yt {
+  background: #ffffff url(./yt.svg) no-repeat center;
+}
+
+a {
+  transition: all 0.3s ease;
 }

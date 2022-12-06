@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div className="footer-container">
         <div className="rows">
           <div className="coll">
@@ -62,21 +62,90 @@ export const Footer = () => {
                   <Link to={"tarifler"}>Tarfiler</Link>
                 </li>
                 <li>
-                  <Link to={"tarifler"}>Tarfiler</Link>
+                  <Link to={"magazalar"}>Mağazalar</Link>
                 </li>
                 <li>
-                  <Link to={"tarifler"}>Tarfiler</Link>
+                  <Link to={"Faq"}>Faq</Link>
                 </li>
                 <li>
-                  <Link to={"tarifler"}>Tarfiler</Link>
+                  <Link to={"elaqe"}>Əlaqə</Link>
                 </li>
                 <li>
-                  <Link to={"tarifler"}>Tarfiler</Link>
+                  <Link to={"mexfilik"}>Məxfilik</Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="coll"></div>
+          <div className="coll">
+            <div className="subscribe">
+              <form id="w0" action="/az/subscribe.html" method="POST">
+                <input
+                  type="hidden"
+                  name="_csrf-frontend"
+                  value="7R7BIG-b2feGTQnvfkakrbuFLsdTv1xzkP8oiGLfHt_ccvNKXcONv_ILJJo0C--e3uhHjQHULADxvnjeVIZGpQ=="
+                />
+                <h4 className="subscribe-title">Newsletter</h4>
+                <p className="subscribe-desc">
+                  Yeniliklərdən xəbərdar olmaq üçün abunə olun
+                </p>
+                <div className="subscribe-form">
+                  <div className="form-group field-subscribe-email required">
+                    <input
+                      type="text"
+                      id="subscribe-email"
+                      className="subscribe-input"
+                      name="Subscribe[email]"
+                      placeholder="Email..."
+                      aria-required="true"
+                    />
+
+                    <div className="help-block"></div>
+                  </div>{" "}
+                  <button type="button" className="subscribe-btn">
+                    Abunə ol
+                  </button>
+                </div>
+              </form>
+              <div className="footer-social">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/www.glob.az/"
+                      target="_blank"
+                      title=""
+                      className="footer-social-fa"
+                      rel="noreferrer"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/glob.az/"
+                      target="_blank"
+                      title=""
+                      className="footer-social-ins"
+                      rel="noreferrer"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://wa.me/994516157210"
+                      target="_blank"
+                      title=""
+                      className="footer-social-wp"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/channel/UCwk8vPpDiScnh0_7b4aUd6Q"
+                      target="_blank"
+                      title=""
+                      className="footer-social-yt"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="footer-copy"></div>
