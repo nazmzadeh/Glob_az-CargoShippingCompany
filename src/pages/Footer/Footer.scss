@@ -4,6 +4,18 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: "SEGOEUI", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #7a82a6;
+  text-align: left;
+  background-color: #fff;
+}
+
 article,
 aside,
 figcaption,
@@ -48,9 +60,9 @@ section {
 }
 
 .footer-logo {
+  left: -40px;
+  position: relative;
   width: 100%;
-  height: 4.66667rem;
-  margin-bottom: 2.33333rem;
   margin-top: -2rem;
 }
 
@@ -63,15 +75,8 @@ section {
   margin-bottom: 1rem;
 }
 
-.footer-contact li::before {
-  content: "";
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.5rem;
-  position: relative;
-  top: -0.3px;
-  display: inline-block;
-  vertical-align: middle;
+.footer p {
+  font-size: 14px;
 }
 
 .footer-contact li a {
@@ -79,11 +84,25 @@ section {
   color: #707070;
 }
 
-a :hover {
+.footer-contact li span, .footer-contact li a {
+  font-size: 0.93333rem;
+  color: #707070;
+}
+
+
+.footer-menu a {
+  font-size: 14px;
+  color: #707070;
+  transition: all 0.2s;
+}
+
+.footer-menu a:hover {
   color: #ffa600;
   text-decoration: none;
   background-color: transparent;
 }
+
+
 
 .footer-contact ul {
   margin: 0;
@@ -160,6 +179,7 @@ button:not(:disabled),
   cursor: pointer;
 }
 
+
 .subscribe-btn {
   font-family: "SEGUISB", sans-serif;
   font-size: 1rem;
@@ -225,4 +245,43 @@ input {
 
 a {
   transition: all 0.3s ease;
+}
+
+
+//copyright
+
+.footer-copy{
+  width: 100%;
+  font-size: 1.06667rem;
+  color: #363636;
+  text-align: center;
+  padding: 1.13333rem 0;
+  margin-top: 2.86667rem;
+  border-top: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+.copy-container{
+  max-width: 1300px !important;
+}
+
+//responsive 
+
+@media (max-width: 768px) {
+.rows {
+  display: block;
+  width: 100%;
+}
+
+.footer-menu h4 {
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+.subscribe-title {
+  margin-top: 40px;
+}
+
+.desktop-only {
+  display: none;
+}
 }

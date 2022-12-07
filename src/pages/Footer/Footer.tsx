@@ -5,25 +5,27 @@ import marker from "./marker.svg";
 import email from "./email.svg";
 import { Link } from "react-router-dom";
 
+
 export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="rows">
           <div className="coll">
-            <div className="footer-logo">
+            <div className="footer-logo desktop-only">
               <a href="#/">
                 <img src={logo} alt="logo" />
-              </a>
-              <div className="footer-contact">
+              </a>        
+            </div>
+            <div className="footer-contact">
                 <ul>
                   <li className="footer-contact-phone">
                     <img src={phone} alt="" />
                     <a href="tel:+994 12 525 9001" title="">
-                      +994 12 525 9001
+                      +994 12 525 9001,&nbsp;
                     </a>
                     <a href="tel:+994 50 833 9010" title="">
-                      +994 50 833 9010
+                      +994 50 833 9010,&nbsp;
                     </a>
                     <a href="tel:+994 99 833 9010" title="">
                       +994 99 833 9010
@@ -52,7 +54,6 @@ export const Footer = () => {
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
           <div className="coll">
             <div className="footer-menu">
@@ -62,7 +63,7 @@ export const Footer = () => {
                   <Link to={"tarifler"}>Tarfiler</Link>
                 </li>
                 <li>
-                  <Link to={"magazalar"}>Mağazalar</Link>
+                  <Link to={"Mağazalar"}>Mağazalar</Link>
                 </li>
                 <li>
                   <Link to={"Faq"}>Faq</Link>
@@ -148,7 +149,9 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-copy"></div>
+      <div className="footer-copy">
+        <div className="copy-container"> © Glob.az 2022. Bütün Hüquqlar Qorunur</div>
+      </div>
     </footer>
   );
 };
