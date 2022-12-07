@@ -49,17 +49,5 @@
   },
   "devDependencies": {
     "sass": "^1.56.1"
-  },
-  "description": "<<<<<<< HEAD\r # Glob_az\r =======\r # Getting Started with Create React App",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nz020708/Glob_az.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Nz020708/Glob_az/issues"
-  },
-  "homepage": "https://github.com/Nz020708/Glob_az#readme"
+  }
 }
