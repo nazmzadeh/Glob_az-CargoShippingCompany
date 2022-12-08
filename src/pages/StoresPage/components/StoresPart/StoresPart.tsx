@@ -1,7 +1,5 @@
-import './StoresPart.scss'
+import './StoresPart.scss';
 
-export const StoresPart=()=>{
-  return(
-    <p>Magazalar</p>
-  );
-}
+export const StoresPart = () => {
+  return <p>Magazalar</p>;
+};

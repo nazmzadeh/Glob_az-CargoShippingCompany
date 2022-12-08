@@ -1,6 +1,5 @@
-import "./TariffsPart.scss";
-import turk from "./turkey.svg";
-import chevron from "./chevron-right.svg";
+import './TariffsPart.scss';
+import turk from './turkey.svg';
 
 export const Shops = () => {
   return (
@@ -12,12 +11,7 @@ export const Shops = () => {
             <div className="country-tab">
               <ul className="country-tab-nav nav nav-tabs">
                 <li className="nav-item">
-                  <a
-                    data-toggle="tab"
-                    href="#content-2"
-                    className="nav-link active"
-                    title=""
-                  >
+                  <a data-toggle="tab" href="#content-2" className="nav-link active" title="">
                     <img className="turk-img" src={turk} alt="" />
                     <span>Türkiyə</span>
                   </a>
@@ -25,10 +19,7 @@ export const Shops = () => {
               </ul>
 
               <div className="tab-content">
-                <div
-                  className="country-tab-content tab-pane active"
-                  id="content-2"
-                >
+                <div className="country-tab-content tab-pane active" id="content-2">
                   <div className="tariff-inside desktop-show">
                     <table className="table table-striped">
                       <thead>
@@ -104,9 +95,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">0.7 $</div>
-                          <div className="tariff-content">
-                            0.001 kq-dan 0.100 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.001 kq-dan 0.100 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -116,9 +105,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">1.95 $</div>
-                          <div className="tariff-content">
-                            0.100 kq-dan 0.250 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.100 kq-dan 0.250 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -128,9 +115,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">2.95 $</div>
-                          <div className="tariff-content">
-                            0.250 kq-dan 0.500 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.250 kq-dan 0.500 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -140,9 +125,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">3.5 $</div>
-                          <div className="tariff-content">
-                            0.50 kq-dan 0.750 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.50 kq-dan 0.750 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -152,9 +135,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">3.9 $</div>
-                          <div className="tariff-content">
-                            0.750 kq-dan 1.00 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.750 kq-dan 1.00 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -164,9 +145,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">3.5 $</div>
-                          <div className="tariff-content">
-                            1 kq və üstü (Hər kiloqram üçün)
-                          </div>
+                          <div className="tariff-content">1 kq və üstü (Hər kiloqram üçün)</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -182,9 +161,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">0.7 $</div>
-                          <div className="tariff-content">
-                            0.001 kq-dan 0.100 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.001 kq-dan 0.100 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -194,9 +171,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">1.95 $</div>
-                          <div className="tariff-content">
-                            0.100 kq-dan 0.250 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.100 kq-dan 0.250 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -206,9 +181,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">2.95 $</div>
-                          <div className="tariff-content">
-                            0.250 kq-dan 0.500 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.250 kq-dan 0.500 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -218,9 +191,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">3.5 $</div>
-                          <div className="tariff-content">
-                            0.50 kq-dan 0.750 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.50 kq-dan 0.750 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -230,9 +201,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">3.9 $</div>
-                          <div className="tariff-content">
-                            0.750 kq-dan 1.00 kq-a qədər
-                          </div>
+                          <div className="tariff-content">0.750 kq-dan 1.00 kq-a qədər</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya
@@ -242,9 +211,7 @@ export const Shops = () => {
                       <div className="col-12">
                         <div className="tariff-box">
                           <div className="tariff-price">3.5 $</div>
-                          <div className="tariff-content">
-                            1 kq və üstü (Hər kiloqram üçün)
-                          </div>
+                          <div className="tariff-content">1 kq və üstü (Hər kiloqram üçün)</div>
                           <div className="tariff-country">
                             <img className="turk-img" src={turk} alt="" />
                             Türkiyədən Bakıya

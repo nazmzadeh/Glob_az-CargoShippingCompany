@@ -1,18 +1,18 @@
-import "./HeroSlider.scss";
-import Slider, { Slide, Nav, Overlay } from "hero-slider";
-import Wrapper from "./components/Wrapper/Wrapper";
-import Title from "./components/Title/Title";
-import Subtitle from "./components/Subtitle/Subtitle";
-import slideImg1 from "./images/sliderglobbi.png";
-import slideImg2 from "./images/tetbiq.png";
-import { isVisible } from "@testing-library/user-event/dist/utils";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import './HeroSlider.scss';
+import Slider, { Nav, Overlay, Slide } from 'hero-slider';
+import Subtitle from './components/Subtitle/Subtitle';
+import Title from './components/Title/Title';
+import Wrapper from './components/Wrapper/Wrapper';
+import slideImg1 from './images/sliderglobbi.png';
+import slideImg2 from './images/tetbiq.png';
 
-export interface ISLide{
-  id:number;
-  title:string;
-  subTitle:string;
-  caption:string;
-  imageSrc:string;
+export interface ISLide {
+  id: number;
+  title: string;
+  subTitle: string;
+  caption: string;
+  imageSrc: string;
 }
 export const HeroSlider = () => {
   return (
@@ -33,10 +33,9 @@ export const HeroSlider = () => {
         className="hero"
       >
         <Overlay>
-          
           <Slide
             style={{
-              backgroundImage: "linear-gradient(#ff7700, #ffa600)",
+              backgroundImage: 'linear-gradient(#ff7700, #ffa600)',
             }}
           >
             <Wrapper>
@@ -45,9 +44,8 @@ export const HeroSlider = () => {
                 <Subtitle>Peşəkar komandamızla xidmətinizdəyik.</Subtitle>
                 <div className="slider_caption">
                   <a href="#">
-                    Globbinin boyu o qədər uzundur ki, Sizin problemlərinizi
-                    vaxtında görəcək və məmnuniyyətiniz üçün problemlərinizi tez
-                    bir zamanda həll edəcək.
+                    Globbinin boyu o qədər uzundur ki, Sizin problemlərinizi vaxtında görəcək və
+                    məmnuniyyətiniz üçün problemlərinizi tez bir zamanda həll edəcək.
                   </a>
                 </div>
               </div>
@@ -57,7 +55,7 @@ export const HeroSlider = () => {
 
           <Slide
             style={{
-              backgroundImage: "linear-gradient(#ff7700, #ffa600)",
+              backgroundImage: 'linear-gradient(#ff7700, #ffa600)',
             }}
           >
             <Wrapper>

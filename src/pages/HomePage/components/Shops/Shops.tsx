@@ -1,7 +1,5 @@
-import './Shops.scss'
+import './Shops.scss';
 
-export const Shops=()=>{
-  return(
-    <p></p>
-  );
-}
+export const Shops = () => {
+  return <p></p>;
+};
