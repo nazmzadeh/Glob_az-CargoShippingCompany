@@ -1,15 +1,16 @@
-import "./HeroSlider.scss";
-import Slider, { Slide, Nav, Overlay } from "hero-slider";
-import Wrapper from "./components/Wrapper/Wrapper";
-import Title from "./components/Title/Title";
-import Subtitle from "./components/Subtitle/Subtitle";
-import slideImg1 from "./images/sliderglobbi.png";
-import slideImg2 from "./images/tetbiq.png";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import './HeroSlider.scss';
+import Slider, { Nav, Overlay, Slide } from 'hero-slider';
+import Subtitle from './components/Subtitle/Subtitle';
+import Title from './components/Title/Title';
+import Wrapper from './components/Wrapper/Wrapper';
+import slideImg1 from './images/sliderglobbi.png';
+import slideImg2 from './images/tetbiq.png';
 
-export interface ISlide {
+export interface ISLide {
   id: number;
   title: string;
-  subtitle: string;
+  subTitle: string;
   caption: string;
   imageSrc: string;
 }
@@ -36,6 +37,7 @@ export const HeroSlider = (props: IHeroSliderProps) => {
         className="hero"
       >
         <Overlay>
+
           {slides.map((slide, i) => (
             <Slide
             key={slide.id}
@@ -55,7 +57,6 @@ export const HeroSlider = (props: IHeroSliderProps) => {
               </Wrapper>
             </Slide>
           ))}
-
         </Overlay>
         <Nav />
       </Slider>

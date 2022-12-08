@@ -1,7 +1,5 @@
-import './News.scss'
+import './News.scss';
 
-export const News=()=>{
-  return(
-    <p></p>
-  );
-}
+export const News = () => {
+  return <p></p>;
+};

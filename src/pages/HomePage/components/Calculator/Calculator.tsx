@@ -1,7 +1,5 @@
-import './Calculator.scss'
+import './Calculator.scss';
 
-export const Calculator=()=>{
-  return(
-    <p></p>
-  );
-}
+export const Calculator = () => {
+  return <p></p>;
+};
