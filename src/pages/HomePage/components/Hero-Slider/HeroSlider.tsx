@@ -14,7 +14,11 @@ export interface ISLide {
   caption: string;
   imageSrc: string;
 }
-export const HeroSlider = () => {
+export interface IHeroSliderProps {
+  slides: ISlide[]
+}
+export const HeroSlider = (props: IHeroSliderProps) => {
+  const { slides } = props;
   return (
     <section id="hero">
       <Slider
@@ -33,42 +37,26 @@ export const HeroSlider = () => {
         className="hero"
       >
         <Overlay>
-          <Slide
-            style={{
-              backgroundImage: 'linear-gradient(#ff7700, #ffa600)',
-            }}
-          >
-            <Wrapper>
-              <div className="summary">
-                <Title>Globbi Sizi salamlayır!</Title>
-                <Subtitle>Peşəkar komandamızla xidmətinizdəyik.</Subtitle>
-                <div className="slider_caption">
-                  <a href="#">
-                    Globbinin boyu o qədər uzundur ki, Sizin problemlərinizi vaxtında görəcək və
-                    məmnuniyyətiniz üçün problemlərinizi tez bir zamanda həll edəcək.
-                  </a>
-                </div>
-              </div>
-              <img src={slideImg1} alt="bla" srcSet={slideImg1}></img>
-            </Wrapper>
-          </Slide>
 
-          <Slide
-            style={{
-              backgroundImage: 'linear-gradient(#ff7700, #ffa600)',
-            }}
-          >
-            <Wrapper>
-              <div className="summary">
-                <Title>Artıq hər kəs üçün tətbiqimiz var!</Title>
-                <Subtitle>İOS və ANDROİD istifadəçiləri üçün</Subtitle>
-                <div className="slider_caption">
-                  <a href="#">Ətraflı məlumat üçün klik edin..</a>
+          {slides.map((slide, i) => (
+            <Slide
+            key={slide.id}
+              className="sld"
+            >
+              <Wrapper>
+                <div className="summary">
+                  <Title>{slide.title}</Title>
+                  <Subtitle>{slide.subtitle}</Subtitle>
+                  <div className="slider_caption">
+                    <a href="#">
+                    {slide.caption}
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <img src={slideImg2} alt="bla" srcSet={slideImg2}></img>
-            </Wrapper>
-          </Slide>
+                <img src={slide.imageSrc} alt="slide" srcSet={slide.imageSrc}></img>
+              </Wrapper>
+            </Slide>
+          ))}
         </Overlay>
         <Nav />
       </Slider>
