@@ -4,18 +4,17 @@ import Slider, { Nav, Overlay, Slide } from 'hero-slider';
 import Subtitle from './components/Subtitle/Subtitle';
 import Title from './components/Title/Title';
 import Wrapper from './components/Wrapper/Wrapper';
-import slideImg1 from './images/sliderglobbi.png';
-import slideImg2 from './images/tetbiq.png';
 
-export interface ISLide {
+
+export interface ISlide {
   id: number;
   title: string;
-  subTitle: string;
+  subtitle: string;
   caption: string;
   imageSrc: string;
 }
 export interface IHeroSliderProps {
-  slides: ISlide[]
+  slides: ISlide[];
 }
 export const HeroSlider = (props: IHeroSliderProps) => {
   const { slides } = props;
@@ -39,18 +38,13 @@ export const HeroSlider = (props: IHeroSliderProps) => {
         <Overlay>
 
           {slides.map((slide, i) => (
-            <Slide
-            key={slide.id}
-              className="sld"
-            >
+            <Slide key={slide.id} className="sld">
               <Wrapper>
                 <div className="summary">
                   <Title>{slide.title}</Title>
                   <Subtitle>{slide.subtitle}</Subtitle>
                   <div className="slider_caption">
-                    <a href="#">
-                    {slide.caption}
-                    </a>
+                    <a href="#">{slide.caption}</a>
                   </div>
                 </div>
                 <img src={slide.imageSrc} alt="slide" srcSet={slide.imageSrc}></img>
