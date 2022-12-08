@@ -1,6 +1,3 @@
-@import "../../variables";
-@import "../../mixins";
-
 * {
   box-sizing: border-box;
 }
@@ -47,7 +44,6 @@ section {
 
 .rows {
   display: flex;
-  // flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -89,7 +85,6 @@ section {
   color: #707070;
 }
 
-
 .footer-menu a {
   font-size: 14px;
   color: #707070;
@@ -101,8 +96,6 @@ section {
   text-decoration: none;
   background-color: transparent;
 }
-
-
 
 .footer-contact ul {
   margin: 0;
@@ -127,7 +120,6 @@ section {
   margin-bottom: 0.8rem;
 }
 
-//3rd div
 .subscribe-title {
   font-family: "SEGUISB", sans-serif;
   font-size: 1.06667rem;
@@ -173,12 +165,11 @@ textarea {
 }
 
 button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
   cursor: pointer;
 }
-
 
 .subscribe-btn {
   font-family: "SEGUISB", sans-serif;
@@ -220,8 +211,8 @@ input {
   width: 2.33333rem;
   height: 2.33333rem;
   border-radius: 50%;
-  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
-  -webkit-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   -ms-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   transition: all 0.2s;
@@ -247,10 +238,7 @@ a {
   transition: all 0.3s ease;
 }
 
-
-//copyright
-
-.footer-copy{
+.footer-copy {
   width: 100%;
   font-size: 1.06667rem;
   color: #363636;
@@ -260,30 +248,25 @@ a {
   border-top: solid 1px rgba(0, 0, 0, 0.05);
 }
 
-.copy-container{
+.copy-container {
   max-width: 1300px !important;
   margin-left: auto;
   margin-right: auto;
 }
 
-//responsive 
-
 @media (max-width: 768px) {
-.rows {
-  display: block;
-  width: 100%;
-}
-
-.footer-menu h4 {
-  margin-bottom: 15px;
-  margin-top: 40px;
-}
-
-.subscribe-title {
-  margin-top: 40px;
-}
-
-.desktop-only {
-  display: none;
-}
-}
+  .rows {
+    display: block;
+    width: 100%;
+  }
+  .footer-menu h4 {
+    margin-bottom: 15px;
+    margin-top: 40px;
+  }
+  .subscribe-title {
+    margin-top: 40px;
+  }
+  .desktop-only {
+    display: none;
+  }
+}/*# sourceMappingURL=Footer.css.map */
