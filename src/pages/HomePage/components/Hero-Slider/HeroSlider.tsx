@@ -38,9 +38,8 @@ export const HeroSlider = (props: IHeroSliderProps) => {
         <Overlay>
           {slides.map((slide, i) => (
             <Slide
-              style={{
-                backgroundImage: "linear-gradient(#ff7700, #ffa600)",
-              }}
+            key={slide.id}
+              className="sld"
             >
               <Wrapper>
                 <div className="summary">
@@ -52,7 +51,7 @@ export const HeroSlider = (props: IHeroSliderProps) => {
                     </a>
                   </div>
                 </div>
-                <img src={slide.imageSrc} alt="slide_image" srcSet={slide.imageSrc}></img>
+                <img src={slide.imageSrc} alt="slide" srcSet={slide.imageSrc}></img>
               </Wrapper>
             </Slide>
           ))}
