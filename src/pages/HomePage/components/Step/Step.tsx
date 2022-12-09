@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Step.scss';
+import { Title } from '../TitleofSection/Title';
 import deliveryIcon from './images/catdirilma-01.svg';
 import deliveryImg from './images/step.svg';
 import orderIcon from './images/nece-sifarish-edim-01-01-1.svg';
@@ -9,7 +10,7 @@ export const Step = () => {
   return (
     <section id="step">
       <div className="myContainer">
-        <h2>SİZ ALIRSINIZ,BİZ ÇATDIRIRIQ</h2>
+        <Title value="SİZ ALIRSINIZ,BİZ ÇATDIRIRIQ" isWhite={false} />
         <div className="flex-row">
           <img className="main_img" src={deliveryImg} alt="delivery" />
           <div className="steps">
@@ -40,8 +41,7 @@ export const Step = () => {
               </div>
             </div>
           </div>
-          </div>
-        
+        </div>
       </div>
     </section>
   );

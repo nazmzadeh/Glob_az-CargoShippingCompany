@@ -1,0 +1,30 @@
+#calculator{
+    text-align: left;
+    background: linear-gradient(#ff7700, #ffa600);
+    p{
+        color: white;
+    }
+    .flex-row{
+        position: relative;
+        .form-container{
+            background-color: white;
+            width: 570px;
+            height: 590px;
+           .form{
+                width: 225px;
+            
+                &::after {
+                    content: "";
+                    width: 36rem;
+                    height: 19.33333rem;
+                    background: url(./images/calculator.png) no-repeat center;
+                    position: absolute;
+                    top: 28%;
+                }
+            }
+        }
+       
+  
+    }
+}
+
