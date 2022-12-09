@@ -3,6 +3,10 @@ import phone from "./phone.svg";
 import logo from "./logo.png";
 import { Link } from "react-router-dom";
 
+const signClick = () => {
+  console.log('blbals')
+}
+
 export const Header = () => {
   return (
     <header className="header header-inside">
@@ -29,9 +33,9 @@ export const Header = () => {
               </div>
             </div>
             <div className="header-top-right">
-              <a href="#signin" className="inline cboxElement" title="">
+              <button  className="singIn-button" onClick={signClick} >
                 Daxil ol
-              </a>
+              </button>
               <span className="random">/</span>
               <a href="/az/signup.html" title="">
                 Qeydiyyat
@@ -58,24 +62,16 @@ export const Header = () => {
               </a> */}
                 </li>
                 <li>
-                  <a href="/store.html" title="">
-                    Mağazalar
-                  </a>
+                <Link to={"Mağazalar"}>Mağazalar</Link>
                 </li>
                 <li>
-                  <a href="/faq.html" title="">
-                    Faq
-                  </a>
+                  <Link to={"Faq"}>Faq</Link>
                 </li>
                 <li>
-                  <a href="/contact.html" title="">
-                    Əlaqə
-                  </a>
+                <Link to={"Əlaqə"}>Əlaqə</Link>
                 </li>
                 <li>
-                  <a href="/az/menu/maxfilik-32.html" title="">
-                    Məxfilik
-                  </a>
+                <Link to={"Məxfilik"}>Məxfilik</Link>
                 </li>
               </ul>
             </div>

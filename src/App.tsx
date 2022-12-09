@@ -18,7 +18,8 @@ function App() {
           </Route> */}
 
           <Route path="tarifler" element={<Tariffs />} />
-          <Route path="Mağazalar" element={<Stores />} />
+          <Route path="Magazalar" element={<Stores />} />
+          <Route path="Mexfilik" element={<Confidentiality />} />
         </Routes>
         {/* <Tariffs />
         
