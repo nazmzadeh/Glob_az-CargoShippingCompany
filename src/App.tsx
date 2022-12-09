@@ -23,6 +23,7 @@ function App() {
 
           <Route path="tarifler" element={<Tariffs />} />
           <Route path="Mağazalar" element={<Stores />} />
+          <Route path="Məxfilik" element={<Confidentiality />} />
         </Routes>
         {/* <Tariffs />
         
