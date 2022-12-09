@@ -30,7 +30,7 @@ export const Header = () => {
             </div>
             <div className="header-top-right">
               <a href="#signin" className="inline cboxElement" title="">
-                Daxil ol
+              <Link to={"account-page"}>Daxil ol</Link>
               </a>
               <span className="random">/</span>
               <a href="/az/signup.html" title="">
@@ -53,9 +53,7 @@ export const Header = () => {
               <ul className="headerList">
                 <li>
                   <Link to={"tarifler"}>Tarfiler</Link>
-                  {/* <a href="/tariff.html" title="">
-                Tariflər
-              </a> */}
+                
                 </li>
                 <li>
                   <a href="/store.html" title="">

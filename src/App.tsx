@@ -6,6 +6,9 @@ import { Route, Routes } from 'react-router-dom';
 import { Stores } from './pages/StoresPage/Stores';
 import { Tariffs } from './pages/TariffsPage/Tariffs';
 import React from 'react';
+import { SideNavBar } from './components/SideNavBar/SideNabBar';
+import { AccountPage } from './pages/AccountPage/Account';
+
 function App() {
   return (
     <div className="App">
@@ -17,8 +20,11 @@ function App() {
             <Route path="tasks" element={<DashboardTasks />} />
           </Route> */}
 
-          <Route path="tarifler" element={<Tariffs />} />
-          <Route path="Mağazalar" element={<Stores />} />
+          <Route path="/tarifler" element={<Tariffs />} />
+          <Route path="/Mağazalar" element={<Stores />} />
+          <Route path="/account-page" element={<AccountPage/>} />
+          
+          
         </Routes>
         {/* <Tariffs />
         
