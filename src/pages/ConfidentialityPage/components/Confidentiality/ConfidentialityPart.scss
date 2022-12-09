@@ -1,3 +1,7 @@
+:root {
+    --bg-color : #f8f8f8;
+    --orange-theme: #ffa600;
+}
 * {
     box-sizing: border-box;
 }
@@ -14,6 +18,7 @@ p {
     text-align: start;
     font-size: 1rem;
     color: #363636;
+    padding-bottom: 200px;
 }
 
 .mex-page {
@@ -21,7 +26,7 @@ p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    background-color: #f8f8f8;
+    background-color: var(--bg-color);
     text-align: left;
 }
 
@@ -45,7 +50,7 @@ p {
 .some-line {
     width: 60px;
     height: 3px;
-    background: #ffa600;
+    background: var(--orange-theme);
     margin-bottom: 60px;
     margin-left: auto;
     margin-right: auto;

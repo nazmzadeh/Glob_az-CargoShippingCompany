@@ -88,14 +88,7 @@ export const ConfidentialityPart = () => {
               cavabdehdir.
             </span>
           </p>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+
         </div>
       </div>
     </div>
