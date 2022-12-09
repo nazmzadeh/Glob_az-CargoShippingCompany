@@ -12,6 +12,7 @@ export interface ISlide {
   subtitle: string;
   caption: string;
   imageSrc: string;
+  
 }
 export interface IHeroSliderProps {
   slides: ISlide[];
@@ -47,7 +48,9 @@ export const HeroSlider = (props: IHeroSliderProps) => {
                     <a href="#">{slide.caption}</a>
                   </div>
                 </div>
-                <img src={slide.imageSrc} alt="slide" srcSet={slide.imageSrc}></img>
+                <a href="#">
+                  <img src={slide.imageSrc} alt="slide" srcSet={slide.imageSrc}></img>
+                </a>
               </Wrapper>
             </Slide>
           ))}
