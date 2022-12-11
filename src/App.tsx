@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Stores } from './pages/StoresPage/Stores';
 import { Tariffs } from './pages/TariffsPage/Tariffs';
 import React from 'react';
+import { Confidentiality } from './pages/ConfidentialityPage/Confidentiality';
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,8 @@ function App() {
           </Route> */}
 
           <Route path="tarifler" element={<Tariffs />} />
-          <Route path="Mağazalar" element={<Stores />} />
+          <Route path="Magazalar" element={<Stores />} />
+          <Route path="Mexfilik" element={<Confidentiality />} />
         </Routes>
         {/* <Tariffs />
         

@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: "SEGOEUI", sans-serif;
+  font-family: $main_font;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -31,7 +31,7 @@ section {
 .footer {
   width: 100%;
   padding: 4.66667rem 0 0;
-  background: #ebf0f4;
+  background: $background-color;
   text-align: start;
 }
 
@@ -80,23 +80,23 @@ section {
 
 .footer-contact li a {
   font-size: 0.93333rem;
-  color: #707070;
+  color: $link-color;
 }
 
 .footer-contact li span, .footer-contact li a {
   font-size: 0.93333rem;
-  color: #707070;
+  color: $link-color;
 }
 
 
 .footer-menu a {
   font-size: 14px;
-  color: #707070;
+  color: $link-color;
   transition: all 0.2s;
 }
 
 .footer-menu a:hover {
-  color: #ffa600;
+  color: $orange-theme;
   text-decoration: none;
   background-color: transparent;
 }
@@ -109,9 +109,9 @@ section {
 }
 
 .footer-menu h4 {
-  font-family: "SEGUISB", sans-serif;
+  font-family: $main_font;
   font-size: 1.06667rem;
-  color: #363636;
+  color: $text-color;
   margin-bottom: 2rem;
   margin-top: 0.93333rem;
 }
@@ -128,16 +128,16 @@ section {
 
 //3rd div
 .subscribe-title {
-  font-family: "SEGUISB", sans-serif;
+  font-family: $main_font;
   font-size: 1.06667rem;
-  color: #363636;
+  color: $text-color;
   margin-bottom: 0.33333rem;
   margin-top: 0.93333rem;
 }
 
 .subscribe-desc {
   font-size: 0.93333rem;
-  color: #707070;
+  color: $link-color;
 }
 
 .subscribe-form {
@@ -180,14 +180,14 @@ button:not(:disabled),
 
 
 .subscribe-btn {
-  font-family: "SEGUISB", sans-serif;
+  font-family: $main_font;
   font-size: 1rem;
   position: absolute;
   top: 0;
   right: 0;
   width: 6.66667rem;
   height: 100%;
-  background: #ffa600;
+  background: $orange-theme;
   color: #ffffff;
   border: none;
   outline: none !important;
@@ -252,7 +252,7 @@ a {
 .footer-copy{
   width: 100%;
   font-size: 1.06667rem;
-  color: #363636;
+  color: $text-color;
   text-align: center;
   padding: 1.13333rem 0;
   margin-top: 2.86667rem;

@@ -6,13 +6,13 @@
 }
 
 .header a {
-  color: #707070;
+  color: $link-color;
   text-decoration: none;
 }
 
 .topHeader {
   display: flex;
-  background: #ebf0f4;
+  background: $background-color;
   flex-direction: row;
   justify-content: space-around;
   padding: 15px;
@@ -30,7 +30,7 @@
 .langOpt {
   margin-right: 50px;
   border: 0px;
-  background: #ebf0f4;
+  background: $background-color;
 }
 
 .header-phone {
@@ -76,10 +76,10 @@
 }
 
 .headerList a {
-  font-family: "SEGUISB", sans-serif;
+  font-family: $main_font;
   font-size: 0.93333rem;
   font-weight: 600;
-  color: #363636;
+  color: $text-color;
 }
 
 .header-inside {
@@ -105,4 +105,13 @@
   .container {
     max-width: 540px;
   }
+}
+
+
+//buttons
+
+.singIn-button {
+  border: 0px;
+  color: $link-color;
+  padding-right: 0px;
 }
