@@ -1,11 +1,11 @@
-import "./Header.scss";
-import phone from "./phone.svg";
-import logo from "./logo.png";
-import { Link } from "react-router-dom";
+import './Header.scss';
+import { Link } from 'react-router-dom';
+import logo from './logo.png';
+import phone from './phone.svg';
 
 const signClick = () => {
-  console.log('blbals')
-}
+  console.log('blbals');
+};
 
 export const Header = () => {
   return (
@@ -33,7 +33,7 @@ export const Header = () => {
               </div>
             </div>
             <div className="header-top-right">
-              <button  className="singIn-button" onClick={signClick} >
+              <button className="singIn-button" onClick={signClick}>
                 Daxil ol
               </button>
               <span className="random">/</span>
@@ -56,22 +56,22 @@ export const Header = () => {
             <div className="headerMenu desktopOnly">
               <ul className="headerList">
                 <li>
-                  <Link to={"tarifler"}>Tarfiler</Link>
+                  <Link to={'tarifler'}>Tarfiler</Link>
                   {/* <a href="/tariff.html" title="">
                 Tariflər
               </a> */}
                 </li>
                 <li>
-                <Link to={"Mağazalar"}>Mağazalar</Link>
+                  <Link to={'Mağazalar'}>Mağazalar</Link>
                 </li>
                 <li>
-                  <Link to={"Faq"}>Faq</Link>
+                  <Link to={'Faq'}>Faq</Link>
                 </li>
                 <li>
-                <Link to={"Əlaqə"}>Əlaqə</Link>
+                  <Link to={'Əlaqə'}>Əlaqə</Link>
                 </li>
                 <li>
-                <Link to={"Məxfilik"}>Məxfilik</Link>
+                  <Link to={'Mexfilik'}>Məxfilik</Link>
                 </li>
               </ul>
             </div>

@@ -1,7 +1,6 @@
-:root {
-    --bg-color : #f8f8f8;
-    --orange-theme: #ffa600;
-}
+@import '../../../../variables';
+@import '../../../../mixins';
+
 * {
     box-sizing: border-box;
 }
@@ -17,23 +16,22 @@ p {
 .mex-content {
     text-align: start;
     font-size: 1rem;
-    color: #363636;
     padding-bottom: 200px;
 }
 
 .mex-page {
-    font-family: "SEGOEUI", sans-serif;
+    font-family: $main_font;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    background-color: var(--bg-color);
+    background-color: $mex-bg-color;
     text-align: left;
 }
 
 .mex-title {
-        font-family: 'SEGUISB', sans-serif;
+        font-family: $main_font;
         font-size: 2.4rem;
-        color: #363636;
+        color: $text-color;
         text-align: center;
         text-transform: uppercase;
         margin-top: 0px;
@@ -50,7 +48,7 @@ p {
 .some-line {
     width: 60px;
     height: 3px;
-    background: var(--orange-theme);
+    background: $orange-theme;
     margin-bottom: 60px;
     margin-left: auto;
     margin-right: auto;
