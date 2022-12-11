@@ -1,5 +1,6 @@
 import './TariffsPart.scss';
 import turk from './turkey.svg';
+import chevron from './chevron-right.svg';
 
 export const Shops = () => {
   return (

@@ -56,6 +56,11 @@ p {
     margin-right: -15px;
     margin-left: -15px;
 }
+@media (min-width: 768px){
+.col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}}
 .col-1,
 .col-2,
 .col-3,
