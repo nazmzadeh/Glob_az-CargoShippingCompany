@@ -2,11 +2,7 @@
     margin-top: 2.66667rem;
     margin-bottom: 13.33333rem;
 }
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+
 p {
     line-height: 1.8rem;
 }
@@ -180,7 +176,4 @@ h6 {
     display: -webkit-flex;
     display: -moz-flex;
     display: flex;
-}
-.align-items-center {
-    align-items: center !important;
 }
