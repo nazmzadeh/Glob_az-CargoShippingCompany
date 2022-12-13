@@ -22,17 +22,6 @@ export const AccountMoneyBarTop = () => {
           </a>
         </div>
       </div>
-      <div className="limit-notification mobile-show">
-        <a href="/balance/index?type=shipping&amp;lang=az" title="">
-          AZN balans: 0.01 AZN
-        </a>
-        <a href="/balance/index?type=order&amp;lang=az" title="">
-          TL balans: 0 TL
-        </a>
-        <a href="#" title="">
-          Cari ay üzrə limit: 0$
-        </a>
-      </div>
     </>
   );
 };

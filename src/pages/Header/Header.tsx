@@ -52,7 +52,7 @@ export const Header = () => {
             <div className="headerMenu desktopOnly">
               <ul className="headerList">
                 <li>
-                  <Link to={"tarifler"}>Tarfiler</Link>
+                  <Link to={"tarifler"}>Tariflər</Link>
                 
                 </li>
                 <li>
