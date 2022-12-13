@@ -35,12 +35,12 @@ const items = [
   },
   {
     id: 5,
-    link: 'https://www.flo.com.tr/',
+    link: 'https://www.pierrecardin.com.tr/?redirected_by=bon.az&utm_source=performics&utm_medium=affiliate&utm_campaign=cps&utm_term=23738&pfx=1021978c76ecb5f9dfd45df48209ae&utm_content=1021978c76ecb5f9dfd45df48209ae',
     image: slick_img_5,
   },
   {
     id: 6,
-    link: 'pierrecardin.com.tr/?redirected_by=bon.az&utm_source=performics&utm_medium=affiliate&utm_campaign=cps&utm_term=23738&pfx=1021978c76ecb5f9dfd45df48209ae&utm_content=1021978c76ecb5f9dfd45df48209ae',
+    link: 'https://www.flo.com.tr/',
     image: slick_img_6,
   },
   {
@@ -90,8 +90,8 @@ export const Shops = () => {
   };
 
   const renderSlides = items.map((item) => (
-    <a href={item.link}>
-      <img className="slick_img" key={item.id} src={item.image} alt="slick_item" />
+    <a href={item.link} key={item.id}>
+      <img className="slick_img" src={item.image} alt="slick_item" />
     </a>
   ));
 
