@@ -1,7 +1,7 @@
 import './Account.scss';
+import { AccountMoneyBarTop } from '../../components/AccountMoneyBarTop/AccountMoneyBarTop';
 import { SideNavBar } from '../../components/SideNavBar/SideNabBar';
 import { SideNavBarTop } from '../../components/AccountSideBarTop/AccountSideBarTop';
-import { AccountMoneyBarTop } from '../../components/AccountMoneyBarTop/AccountMoneyBarTop';
 
 export const AccountPage = () => {
   return (

@@ -244,7 +244,7 @@ export const Shops = () => {
           </div>
         </section>
       </div>
-      <div className="desktop-show">
+      <div className="desktop-show br1" >
         <br />
         <br />
         <br />
