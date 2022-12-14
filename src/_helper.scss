@@ -1,0 +1,14 @@
+@import "./variables";
+.myContainer{
+    font-family: $main_font;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-top: 30px;
+
+}
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,39 +1,42 @@
 @import '../../../../variables';
+@import '../../../../helper';
 
-.myContainer{
-    font-family: $main_font;
-    max-width: 1400px;
-    margin: 0 auto;
-    margin-top: 50px;
-    img:not(.main_img){
-        height: 70px;
-        width: 70px;
-    }
-    h2{
-        font-size: 2rem;
-        font-weight: 700;
-
-    }
-    .flex-row{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .step{
+#step{
+    .myContainer{
+        img:not(.main_img){
+            height: 70px;
+            width: 70px;
+        }
+        .title{
+            text-align: center;
+        }
+        h2{
+            font-size: 2rem;
+            font-weight: 700;
+    
+        }
+        .flex-row{
             display: flex;
-            text-align: left;
-            align-items: end;
-            margin-top: 50px;
-            .text{
-                max-width: 480px;
-                margin-left: 30px;
-                p,a{
-                    font-size: 0.8rem;
+            justify-content: space-between;
+            align-items: center;
+            .step{
+                display: flex;
+                text-align: left;
+                align-items: end;
+                margin-top: 50px;
+                .text{
+                    max-width: 480px;
+                    margin-left: 30px;
+                    p,a{
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }
+        
     }
-    
 }
+
 
 @media screen and (max-width: 860px) {
     #step{

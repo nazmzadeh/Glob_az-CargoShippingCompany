@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Step.scss';
-import { Title } from '../TitleofSection/Title';
+import { Title } from '../../../../components/TitleofSection/Title';
 import deliveryIcon from './images/catdirilma-01.svg';
 import deliveryImg from './images/step.svg';
 import orderIcon from './images/nece-sifarish-edim-01-01-1.svg';
@@ -10,7 +10,9 @@ export const Step = () => {
   return (
     <section id="step">
       <div className="myContainer">
-        <Title value="SİZ ALIRSINIZ,BİZ ÇATDIRIRIQ" isWhite={false} />
+        <div className="title">
+          <Title value="SİZ ALIRSINIZ,BİZ ÇATDIRIRIQ" isWhite={false} />
+        </div>
         <div className="flex-row">
           <img className="main_img" src={deliveryImg} alt="delivery" />
           <div className="steps">

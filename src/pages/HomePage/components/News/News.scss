@@ -1,0 +1,24 @@
+@import '../../../../helper';
+
+#news{
+min-height: 550px;
+.title{
+    text-align: center;
+}
+.cards_container{
+    max-width: 1300px;
+    .cards{
+        margin-top: 40px;
+        .card{
+            padding: 0;
+            margin: 10px;
+            border: 0;
+            box-shadow:0 6px 24px 0 rgb(0 0 0 / 6%);
+         .card_body{
+            padding: 0;
+         }
+        }
+    }
+}
+
+}

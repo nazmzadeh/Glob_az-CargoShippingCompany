@@ -1,5 +1,5 @@
 import './Shops.scss';
-import { Title } from '../TitleofSection/Title';
+import { Title } from '../../../../components/TitleofSection/Title';
 import React from 'react';
 import Slider from 'react-slick';
 import slick_img_1 from './images/mlogo.png';

@@ -1,4 +1,6 @@
 @import '../../../../variables';
+@import '../../../../helper';
+
 #calculator {
   text-align: left;
   background: $gradient;
@@ -106,8 +108,15 @@
         width: 100%;
         min-height: 590px;
         margin: 0 auto;
-        input {
-            width: 100%;
+        label{
+          display: block;
+          width: 100%;
+        }
+      
+        .volume_components {
+          label.central {
+            margin: 0;
+          }
         }
         .volume_components,.weight{
             display: block;
@@ -121,4 +130,7 @@
       }
     }
   }
+}
+.flex-row{
+  flex-direction: row;
 }
