@@ -1,13 +1,25 @@
 import './Header.scss';
 import { Link } from 'react-router-dom';
+import { LogInUserPayload, logInUser } from '../../app/currentUserSlice';
+import { RootState } from '../../app/store';
+import { UserResponse } from '../../models/UserResponse';
+import { useDispatch, useSelector } from 'react-redux';
 import logo from './logo.png';
 import phone from './phone.svg';
 
-const signClick = () => {
-  console.log('blbals');
-};
-
 export const Header = () => {
+  const currentUserState = useSelector((state: RootState) => state.currentUser);
+  const dispatch = useDispatch();
+  const user: UserResponse = {
+    avatar: '',
+    email: '',
+    firstName: 'Rafael',
+    lastName: 'Nagiyev',
+    id: 5,
+  };
+  const payload: LogInUserPayload = { user: user };
+  const emulateLogIn = () => dispatch(logInUser(payload));
+
   return (
     <header className="header header-inside">
       <div className="topHeader">
@@ -32,12 +44,24 @@ export const Header = () => {
                 </a>
               </div>
             </div>
+            <button onClick={emulateLogIn}>TestButton</button>
             <div className="header-top-right">
-              <Link to="account-page" className="inline cboxElement">Daxil ol</Link>
-              <span className="random">/</span>
-              <a href="/az/signup.html" title="">
-                Qeydiyyat
-              </a>
+              {currentUserState.currentUser ? (
+                <div>
+                  {currentUserState.currentUser.firstName}
+                  {currentUserState.currentUser.lastName}
+                </div>
+              ) : (
+                <>
+                  <Link to="account-page" className="inline cboxElement">
+                    Daxil ol
+                  </Link>
+                  <span className="random">/</span>
+                  <a href="/az/signup.html" title="">
+                    Qeydiyyat
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -54,7 +78,7 @@ export const Header = () => {
             <div className="headerMenu desktopOnly">
               <ul className="headerList">
                 <li>
-                  <Link to={"tarifler"}>Tariflər</Link>
+                  <Link to={'tarifler'}>Tariflər</Link>
                 </li>
                 <li>
                   <Link to={'Magazalar'}>Mağazalar</Link>
@@ -69,6 +93,7 @@ export const Header = () => {
                   <Link to={'Mexfilik'}>Məxfilik</Link>
                 </li>
               </ul>
+              {currentUserState.currentUser && <div>bbutton button button</div>}
             </div>
           </div>
         </div>
