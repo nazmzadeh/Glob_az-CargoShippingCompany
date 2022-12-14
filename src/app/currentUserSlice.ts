@@ -22,10 +22,11 @@ export const currentUserSlice = createSlice({
     },
     logOutUser: (state) => {
       state.currentUser = undefined;
-    }
+    },
   },
 });
 
 export const { logInUser } = currentUserSlice.actions;
+export const { logOutUser } = currentUserSlice.actions;
 
 export const currentUserReducer = currentUserSlice.reducer;

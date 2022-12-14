@@ -1,5 +1,5 @@
-@import "../../variables";
-@import "../../mixins";
+@import '../../variables';
+@import '../../mixins';
 
 * {
   box-sizing: border-box;
@@ -25,6 +25,7 @@
 
 .headerTopLeft {
   display: flex;
+  align-items: center;
 }
 
 .langOpt {
@@ -73,6 +74,7 @@
   list-style-type: none;
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 .headerList a {
@@ -107,11 +109,99 @@
   }
 }
 
-
 //buttons
 
-.singIn-button {
-  border: 0px;
-  color: $link-color;
-  padding-right: 0px;
+.header-cart {
+  display: flex;
+}
+
+.btn {
+  font: $main_font;
+  font-weight: 600;
+  margin-left: 40px;
+  padding: 8px 20px 8px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-sifarish {
+  border: 1px $orange-theme solid;
+  background-color: $orange-theme;
+  color: white !important;
+  height: auto;
+  line-height: 24px;
+}
+
+.btn-beyan {
+  border: 1px #28a745 solid;
+  background-color: #28a745;
+  color: white !important;
+  height: auto;
+  line-height: 24px;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+//header profile
+
+.header-account-img {
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.33333rem !important;
+  border-radius: 50%;
+}
+
+.header-right-logedIn {
+  display: flex;
+}
+
+.header-account {
+  padding-right: 15px;
+  border-right: 1px $link-color solid;
+  margin-right: 15px;
+  display: flex;
+}
+
+.header-account-img {
+  width: 21px !important;
+  height: 21px !important;
+}
+
+.logOut-div {
+  display: flex;
+  align-items: center;
+}
+
+//cart
+
+.cart-icon {
+  display: flex;
+  align-self: center;
+  width: 25px;
+  height: 25px;
+  background: url(./shopping-cart.svg) no-repeat center;
+  background-size: 100%;
+  position: relative;
+}
+
+.basket-count {
+  width: 18px;
+  height: 18px;
+  background: #82cc70;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -9px;
+  right: -8px;
+  display: block;
+  z-index: 99999;
+  text-align: center;
+  padding: 0;
+  font-size: 12px;
 }

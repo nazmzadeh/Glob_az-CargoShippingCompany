@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.5" height="15" viewBox="0 0 13.5 15">
+    <defs>
+        <style>
+            .cls-1{fill:#ffa600}
+        </style>
+    </defs>
+    <path id="logout" d="M12.75 13.25V11H7.5V8h5.25V5.75L16.5 9.5l-3.75 3.75M11.25 2a1.5 1.5 0 0 1 1.5 1.5V5h-1.5V3.5H4.5v12h6.75V14h1.5v1.5a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 15.5v-12A1.5 1.5 0 0 1 4.5 2z" class="cls-1" transform="translate(-3 -2)"/>
+</svg>
