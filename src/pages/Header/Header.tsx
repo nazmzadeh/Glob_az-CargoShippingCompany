@@ -4,7 +4,6 @@ import { LogInUserPayload, logInUser, logOutUser } from '../../app/currentUserSl
 import { RootState } from '../../app/store';
 import { UserResponse } from '../../models/UserResponse';
 import { useDispatch, useSelector } from 'react-redux';
-import cart from './shopping-cart.svg';
 import logo from './logo.png';
 import logout from './logout.svg';
 import noPhoto from './nophoto.jpg';

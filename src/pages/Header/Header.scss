@@ -135,8 +135,8 @@
 }
 
 .btn-beyan {
-  border: 1px #28a745 solid;
-  background-color: #28a745;
+  border: 1px $greenish-color solid;
+  background-color: $greenish-color;
   color: white !important;
   height: auto;
   line-height: 24px;
@@ -193,7 +193,7 @@
 .basket-count {
   width: 18px;
   height: 18px;
-  background: #82cc70;
+  background: $another-green;
   color: #fff;
   border-radius: 50%;
   position: absolute;
