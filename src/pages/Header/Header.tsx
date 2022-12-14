@@ -1,7 +1,11 @@
-import "./Header.scss";
-import phone from "./phone.svg";
-import logo from "./logo.png";
-import { Link } from "react-router-dom";
+import './Header.scss';
+import { Link } from 'react-router-dom';
+import logo from './logo.png';
+import phone from './phone.svg';
+
+const signClick = () => {
+  console.log('blbals');
+};
 
 export const Header = () => {
   return (
@@ -29,9 +33,7 @@ export const Header = () => {
               </div>
             </div>
             <div className="header-top-right">
-              <a href="#signin" className="inline cboxElement" title="">
-              <Link to={"account-page"}>Daxil ol</Link>
-              </a>
+              <Link to="account-page" className="inline cboxElement">Daxil ol</Link>
               <span className="random">/</span>
               <a href="/az/signup.html" title="">
                 Qeydiyyat
@@ -53,27 +55,18 @@ export const Header = () => {
               <ul className="headerList">
                 <li>
                   <Link to={"tarifler"}>Tariflər</Link>
-                
                 </li>
                 <li>
-                  <a href="/store.html" title="">
-                    Mağazalar
-                  </a>
+                  <Link to={'Magazalar'}>Mağazalar</Link>
                 </li>
                 <li>
-                  <a href="/faq.html" title="">
-                    Faq
-                  </a>
+                  <Link to={'Faq'}>Faq</Link>
                 </li>
                 <li>
-                  <a href="/contact.html" title="">
-                    Əlaqə
-                  </a>
+                  <Link to={'Əlaqə'}>Əlaqə</Link>
                 </li>
                 <li>
-                  <a href="/az/menu/maxfilik-32.html" title="">
-                    Məxfilik
-                  </a>
+                  <Link to={'Mexfilik'}>Məxfilik</Link>
                 </li>
               </ul>
             </div>
