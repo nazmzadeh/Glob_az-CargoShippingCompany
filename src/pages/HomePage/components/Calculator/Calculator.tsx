@@ -3,9 +3,6 @@ import { CustomSelect } from '../Calculator/components/CustomSelect/CustomSelect
 import { Title } from '../TitleofSection/Title';
 // import airplaneImg from '../Calculator/images/calculator.png';
 import { useState } from 'react';
-
-
-
 const options = [{ value: 'Türkiyə', label: 'Türkiyə' }];
 const units = [
   { value: 'kq', label: 'kq' },
