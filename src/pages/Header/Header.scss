@@ -37,6 +37,9 @@
 .header-phone {
   display: flex;
   gap: 5px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-right: 40px;
 }
 
 .random {
@@ -151,7 +154,7 @@
 .header-account-img {
   width: 31px;
   height: 31px;
-  display: inline-block;
+  display: flex;
   vertical-align: middle;
   margin-right: 0.33333rem !important;
   border-radius: 50%;
@@ -204,4 +207,91 @@
   text-align: center;
   padding: 0;
   font-size: 12px;
+}
+
+
+//nav bar 
+
+.navBar img {
+  width: 39px;
+  height: 35px;
+}
+
+.navBar button {
+  border: 0;
+  background-color: white;
+}
+
+.menuNav {
+  display: none;
+}
+
+.showMenu {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 13px;
+}
+
+.menuNav ul {
+  list-style: none;
+  text-align: center;
+}
+
+.menuNav li {
+  padding: 5px;
+}
+
+.menuNav a {
+  color: $text-color !important;
+  font-family: $main_font;
+}
+
+.mobile-menu {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: solid 1px #0000001a;
+  border-bottom: solid 1px #0000001a;
+}
+
+.mobile-lang ul {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.mobile-lang li {
+  color: $link-color !important;
+  font-family: $main_font;
+}
+
+.currency {
+  color: $link-color !important;
+  font-family: $main_font;
+}
+
+.mobile-menu-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .mobile-only{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only{
+    display: none;
+  }
+
+  .header-cart {
+    position: absolute;
+    right: 100px;
+  }
+
+  .header-top-inside a {
+    font-size: 13px;
+  }
 }

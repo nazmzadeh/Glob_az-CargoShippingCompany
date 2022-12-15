@@ -4,8 +4,11 @@ import { LogInUserPayload, logInUser, logOutUser } from '../../app/currentUserSl
 import { RootState } from '../../app/store';
 import { UserResponse } from '../../models/UserResponse';
 import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
 import logo from './logo.png';
 import logout from './logout.svg';
+import navClose from './nav-close.svg';
+import navOpen from './nav-open.svg';
 import noPhoto from './nophoto.jpg';
 import phone from './phone.svg';
 
@@ -23,13 +26,19 @@ export const Header = () => {
   const emulateLogIn = () => dispatch(logInUser(payload));
   const emulateLogOut = () => dispatch(logOutUser(undefined));
 
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+
   return (
     <header className="header header-inside">
       <div className="topHeader">
         <div className="container">
           <div className="header-top-inside">
             <div className="headerTopLeft">
-              <select className="langOpt" id="lang">
+              <select className="langOpt desktop-only" id="lang">
                 <option value="AZ">AZ</option>
                 <option value="RU">RU</option>
                 <option value="ENG">ENG</option>
@@ -70,7 +79,7 @@ export const Header = () => {
                 </div>
               ) : (
                 <>
-                  <Link to="account-page" className="inline cboxElement" onClick={emulateLogIn}>
+                  <Link to="account-page" className="inline cboxElement no-wrap" onClick={emulateLogIn}>
                     Daxil ol
                   </Link>
                   <span className="random">/</span>
@@ -92,8 +101,8 @@ export const Header = () => {
                 <img src={logo} alt="" />
               </Link>
             </div>
-            <div className="headerMenu desktopOnly">
-              <div className="headerList">
+            <div className="headerMenu desktop-only">
+              <div className="headerList ">
                 <li>
                   <Link to={'tarifler'}>Tariflər</Link>
                 </li>
@@ -117,14 +126,51 @@ export const Header = () => {
                   {/* <img src={cart} alt="" /> */}
                   <span className="basket-count">0</span>
                 </Link>
-                <Link to="account-page" className="btn btn-beyan">
+                <Link to="account-page" className="btn btn-beyan desktop-only">
                   Bəyan Et
                 </Link>
-                <Link to="account-page" className="btn btn-sifarish">
+                <Link to="account-page" className="btn btn-sifarish desktop-only">
                   <span className="no-wrap">+ Sifariş</span> Et
                 </Link>
+                {/* nav bar */}
               </div>
             )}
+            <nav className="navBar mobile-only">
+              <button onClick={handleToggle}>
+                {navbarOpen ? <img src={navClose} alt=""></img> : <img src={navOpen} alt=""></img>}
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
+        <div className="mobile-menu">
+          <ul>
+            <li>
+              <Link to={'tarifler'}>Tariflər</Link>
+            </li>
+            <li>
+              <Link to={'Magazalar'}>Mağazalar</Link>
+            </li>
+            <li>
+              <Link to={'Faq'}>Faq</Link>
+            </li>
+            <li>
+              <Link to={'Əlaqə'}>Əlaqə</Link>
+            </li>
+            <li>
+              <Link to={'Mexfilik'}>Məxfilik</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="mobile-menu-bottom">
+          <div className="currency">1 USD = 1.70 AZN</div>
+          <div className="mobile-lang">
+            <ul>
+              <li>AZE</li>
+              <li>ENG</li>
+              <li>RUS</li>
+            </ul>
           </div>
         </div>
       </div>
