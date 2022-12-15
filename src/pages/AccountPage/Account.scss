@@ -177,3 +177,20 @@ h6 {
     display: -moz-flex;
     display: flex;
 }
+.mobile-show {
+    display: none !important;
+}
+.flex {
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+}
+.space-between {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+}

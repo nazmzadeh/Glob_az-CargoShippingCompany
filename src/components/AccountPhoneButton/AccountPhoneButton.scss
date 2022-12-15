@@ -1,0 +1,74 @@
+
+
+
+@media only screen and (max-width: 767px){
+.account-btn-group {
+    margin-top: 4px;
+    margin-bottom: 13px;
+    display: flex !important;
+}}
+@media only screen and (max-width: 767px){
+.account-btn-group a {
+    margin: 0;
+    width: 48%;
+}}
+.order-btn {
+    padding: 8px 22px !important;
+}
+.btn-green {
+    background: #28a745 !important;
+    color: #ffffff !important;
+}
+.btn {
+    font-family: 'SEGUISB', sans-serif;
+    font-size: 0.93333rem;
+    padding: 0.66667rem 1.33333rem;
+    outline: none;
+    border: none;
+}
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0 1.33rem;
+    font-size: 0.933rem;
+    line-height: 2.875rem;
+    border-radius: 0.1875rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.control-mobile-menu {
+    display: none !important;
+}
+@media only screen and (max-width: 768px){
+.control-mobile-menu {
+    display: block !important;
+}}
+@media only screen and (max-width: 768px){
+.account .return-account {
+    font-size: 15px;
+    color: #fff;
+    border-radius: 3px;
+    background: #ffa61e;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.2rem;
+    position: relative;
+    cursor: pointer;
+}}
+.order-btn {
+    padding: 9px 20px !important;
+    height: auto;
+    line-height: 24px;
+    color: #fff !important;
+    font-size: 18px !important;
+    font-weight: 400;
+    font-family: 'SEGOEUI', sans-serif !important;
+    margin-left: 40px;
+}
+.btn-orange {
+    background: #ffa600 !important;
+    color: #ffffff !important;
+}
