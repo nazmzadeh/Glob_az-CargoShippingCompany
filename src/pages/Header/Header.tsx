@@ -15,8 +15,8 @@ export const Header = () => {
   const user: UserResponse = {
     avatar: '',
     email: '',
-    firstName: 'Rafael',
-    lastName: 'Nagiyev',
+    firstName: 'Kerim',
+    lastName: 'Alekberov',
     id: 5,
   };
   const payload: LogInUserPayload = { user: user };
@@ -57,7 +57,7 @@ export const Header = () => {
                       <div>
                         <img src={noPhoto} alt="" className="header-account-img" />
                       </div>
-                      {currentUserState.currentUser.firstName}
+                      {currentUserState.currentUser.firstName} &nbsp;
                       {currentUserState.currentUser.lastName}
                     </Link>
                   </div>
@@ -70,7 +70,7 @@ export const Header = () => {
                 </div>
               ) : (
                 <>
-                  <Link to="header-account-page" className="inline cboxElement" onClick={emulateLogIn}>
+                  <Link to="account-page" className="inline cboxElement" onClick={emulateLogIn}>
                     Daxil ol
                   </Link>
                   <span className="random">/</span>
@@ -88,9 +88,9 @@ export const Header = () => {
         <div className="container">
           <div className="header-btm-inside">
             <div className="header-logo">
-              <a href="#/">
+              <Link to="/">
                 <img src={logo} alt="" />
-              </a>
+              </Link>
             </div>
             <div className="headerMenu desktopOnly">
               <div className="headerList">
