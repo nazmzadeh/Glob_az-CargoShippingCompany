@@ -1,13 +1,28 @@
 import './Header.scss';
 import { Link } from 'react-router-dom';
+import { LogInUserPayload, logInUser, logOutUser } from '../../app/currentUserSlice';
+import { RootState } from '../../app/store';
+import { UserResponse } from '../../models/UserResponse';
+import { useDispatch, useSelector } from 'react-redux';
 import logo from './logo.png';
+import logout from './logout.svg';
+import noPhoto from './nophoto.jpg';
 import phone from './phone.svg';
 
-const signClick = () => {
-  console.log('blbals');
-};
-
 export const Header = () => {
+  const currentUserState = useSelector((state: RootState) => state.currentUser);
+  const dispatch = useDispatch();
+  const user: UserResponse = {
+    avatar: '',
+    email: '',
+    firstName: 'Kerim',
+    lastName: 'Alekberov',
+    id: 5,
+  };
+  const payload: LogInUserPayload = { user: user };
+  const emulateLogIn = () => dispatch(logInUser(payload));
+  const emulateLogOut = () => dispatch(logOutUser(undefined));
+
   return (
     <header className="header header-inside">
       <div className="topHeader">
@@ -20,7 +35,9 @@ export const Header = () => {
                 <option value="ENG">ENG</option>
               </select>
               <div className="header-phone">
-                <img src={phone} alt="" />
+                <div>
+                  <img src={phone} alt="" className="header-phone-img" />
+                </div>
                 <a href="tel:+994 12 525 9001" title="">
                   +994 12 525 9001
                 </a>
@@ -33,11 +50,35 @@ export const Header = () => {
               </div>
             </div>
             <div className="header-top-right">
-              <Link to="account-page" className="inline cboxElement">Daxil ol</Link>
-              <span className="random">/</span>
-              <a href="/az/signup.html" title="">
-                Qeydiyyat
-              </a>
+              {currentUserState.currentUser ? (
+                <div className="header-right-logedIn">
+                  <div>
+                    <Link to="account-page" className="header-account">
+                      <div>
+                        <img src={noPhoto} alt="" className="header-account-img" />
+                      </div>
+                      {currentUserState.currentUser.firstName} &nbsp;
+                      {currentUserState.currentUser.lastName}
+                    </Link>
+                  </div>
+                  <div className="logOut-div">
+                    <Link to="/" onClick={emulateLogOut}>
+                      <img src={logout} alt="" />
+                      Çıxış
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <Link to="account-page" className="inline cboxElement" onClick={emulateLogIn}>
+                    Daxil ol
+                  </Link>
+                  <span className="random">/</span>
+                  <a href="/az/signup.html" title="">
+                    Qeydiyyat
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -47,14 +88,14 @@ export const Header = () => {
         <div className="container">
           <div className="header-btm-inside">
             <div className="header-logo">
-              <a href="#/">
+              <Link to="/">
                 <img src={logo} alt="" />
-              </a>
+              </Link>
             </div>
             <div className="headerMenu desktopOnly">
-              <ul className="headerList">
+              <div className="headerList">
                 <li>
-                  <Link to={"tarifler"}>Tariflər</Link>
+                  <Link to={'tarifler'}>Tariflər</Link>
                 </li>
                 <li>
                   <Link to={'Magazalar'}>Mağazalar</Link>
@@ -68,8 +109,22 @@ export const Header = () => {
                 <li>
                   <Link to={'Mexfilik'}>Məxfilik</Link>
                 </li>
-              </ul>
+              </div>
             </div>
+            {currentUserState.currentUser && (
+              <div className="header-cart">
+                <Link to="account-page" className="cart-icon">
+                  {/* <img src={cart} alt="" /> */}
+                  <span className="basket-count">0</span>
+                </Link>
+                <Link to="account-page" className="btn btn-beyan">
+                  Bəyan Et
+                </Link>
+                <Link to="account-page" className="btn btn-sifarish">
+                  <span className="no-wrap">+ Sifariş</span> Et
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
