@@ -9,6 +9,7 @@ import React from 'react';
 import { SideNavBar } from './components/SideNavBar/SideNabBar';
 import { AccountPage } from './pages/AccountPage/Account';
 import { Confidentiality } from './pages/ConfidentialityPage/Confidentiality';
+import { Contact } from './pages/ContactPage/Contact';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
           <Route path="/tarifler" element={<Tariffs />} />
           <Route path="/Magazalar" element={<Stores />} />
           <Route path="/Mexfilik" element={<Confidentiality />} />
-          <Route path="/account-page" element={<AccountPage/>} />
+          <Route path="/account-page" element={<AccountPage />} />
+          <Route path="/Əlaqə" element={<Contact />} />
         </Routes>
         {/* <Tariffs />
         
