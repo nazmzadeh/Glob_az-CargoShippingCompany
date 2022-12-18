@@ -45,19 +45,12 @@ p {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-}
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-@media (min-width: 768px){
-.col-md-9 {
-    flex: 0 0 75%;
-    max-width: 75%;
-}}
-.col-1,
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        .col-1,
 .col-2,
 .col-3,
 .col-4,
@@ -132,6 +125,16 @@ p {
     padding-right: 15px;
     padding-left: 15px;
 }
+
+    }
+}
+
+@media (min-width: 768px){
+.col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}}
+
 html {
     font-family: sans-serif;
     line-height: 1.15;

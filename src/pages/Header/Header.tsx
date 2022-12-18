@@ -47,9 +47,9 @@ export const Header = () => {
         <div className="container">
           <div className="header-btm-inside">
             <div className="header-logo">
-              <a href="#/">
-                <img src={logo} alt="" />
-              </a>
+              <Link to="/">
+                <img src={logo} alt="logo" />
+              </Link>
             </div>
             <div className="headerMenu desktopOnly">
               <ul className="headerList">
