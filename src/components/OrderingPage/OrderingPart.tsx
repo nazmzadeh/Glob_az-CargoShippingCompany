@@ -1,4 +1,5 @@
 import './OrderingPart.scss';
+import { OrderingForm } from '../OrderingForm/OrderingForm';
 import { useState } from 'react';
 
 export const OrderingPart = () => {
@@ -7,14 +8,23 @@ export const OrderingPart = () => {
     setCount(count + 1);
   };
 
-  const addForm = () => {
-    <div>hi</div>;
+  const [{ items }, setItems] = useState({ items: [<></>] });
+  const addItem = () => {
+    items.push(<div key={items.length}><OrderingForm /></div>);
+    setItems({ items: [...items] });
   };
+
+  // return (
+  //   <div>
+  //     <button onClick={addItem} />
+  //     {items}
+  //   </div>
+  // );
 
   return (
     <>
       <div className="sifaris">
-        <form className="sifaris-form">
+        {/* <form className="sifaris-form">
           <div className="sifarish-top">
             <h4>Sifariş et</h4>
           </div>
@@ -60,21 +70,23 @@ export const OrderingPart = () => {
               <div className="final-price">+5% = 0 TL</div>
             </div>
           </div>
-        </form>
+        </form> */}
+        <OrderingForm />
         <div className="sifaris-bottom">
           <button
             className="add-product"
             onClick={() => {
               incrementCount();
-              addForm();
+              addItem();
             }}
           >
+            {items}
             + Yeni link əlavə et
           </button>
         </div>
         <div className="sifaris-finish">
           <span className="random-text">
-            Toplam ödəniləcək məbləğ: <span className="final-price">	&nbsp; 0 TL</span>
+            Toplam ödəniləcək məbləğ: <span className="final-price"> &nbsp; 0 TL</span>
           </span>
           <div className="random-buttons">
             <button className="sebete-at">Səbətə at</button>
