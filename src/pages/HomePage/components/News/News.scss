@@ -1,22 +1,43 @@
 @import '../../../../helper';
 
-#news{
+.news{
 min-height: 550px;
 .title{
     text-align: center;
 }
 .cards_container{
     max-width: 1300px;
-    .cards{
-        margin-top: 40px;
+    margin-top: 0px;
+    .g-4{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        justify-content: center;
         .card{
-            padding: 0;
-            margin: 10px;
+            width: calc(100% - 15px);
             border: 0;
-            box-shadow:0 6px 24px 0 rgb(0 0 0 / 6%);
-         .card_body{
-            padding: 0;
-         }
+            box-shadow: 0 6px 24px 0 rgb(0 0 0 / 6%);
+            a:hover{
+                opacity: .7;
+            }
+            .body{
+                padding: 10px;
+                .header{
+                    font-size: 14px;
+                }
+                
+            }
+        }
+    }
+  
+    .all_news{
+        text-align: right;
+        .link_all_news{
+            color:$text-color ;
+            text-decoration: underline;
+            &:hover{
+            color:$orange-theme ;
+
+            }
         }
     }
 }

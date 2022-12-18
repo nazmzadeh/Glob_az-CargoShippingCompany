@@ -38,7 +38,7 @@ export const HeroSlider = (props: IHeroSliderProps) => {
       >
         <Overlay>
 
-          {slides.map((slide, i) => (
+          {slides.map((slide) => (
             <Slide key={slide.id} className="sld">
               <Wrapper>
                 <div className="summary">
