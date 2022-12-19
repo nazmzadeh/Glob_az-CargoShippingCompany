@@ -10,6 +10,9 @@
         .item-selected{
             background-color: $main_color;
         }
+        label{
+            color: $text-color;
+        }
     
 }
 @media screen and (max-width: 660px) {

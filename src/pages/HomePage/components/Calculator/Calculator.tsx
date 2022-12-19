@@ -2,46 +2,50 @@ import './Calculator.scss';
 import { CustomSelect } from '../Calculator/components/CustomSelect/CustomSelect';
 import { Title } from '../TitleofSection/Title';
 // import airplaneImg from '../Calculator/images/calculator.png';
-import { FormEvent, useRef, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { CalculatorButton } from './components/CalculatorButton';
 import { ValuePrinter } from './components/ValuePrinter';
-
-
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 
 const options = [{ value: 'Türkiyə', label: 'Türkiyə' }];
 const units = [
   { value: 'kq', label: 'kq' },
   { value: 'q', label: 'q' },
 ];
+type CalculateFormData = {
+  country: string;
+  length: string;
+  width: string;
+  height: string;
+  unitWeight: string;
+  weight: string;
+};
 
 export const Calculator = () => {
-  
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-  };
+  const { register, handleSubmit, control } = useForm<CalculateFormData>();
 
-  const lengthRef = useRef<HTMLInputElement>(null);
-  const widthRef = useRef<HTMLInputElement>(null);
-  const heightRef = useRef<HTMLInputElement>(null);
-  const weightRef = useRef<HTMLInputElement>(null);
-  
+  const onSubmit: SubmitHandler<CalculateFormData> = (data) => console.log(data);
+
+  // const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  // };
+
   const [result, setResult] = useState(0);
-  const onCalculate = (length: number, width: number, height: number) => {
-    let lastResult = 0;
-    let physicalWeight=0;
-    const volumetricWeight = length * width * height;
-    if (length >= 60 || width >= 60 || height >= 60) {
-      lastResult = volumetricWeight + physicalWeight;
-    }
-    else{
+  // const onCalculate = (length: number, width: number, height: number) => {
+  //   let lastResult = 0;
+  //   let physicalWeight = 0;
+  //   const volumetricWeight = length * width * height;
+  //   if (length >= 60 || width >= 60 || height >= 60) {
+  //     lastResult = volumetricWeight + physicalWeight;
+  //   }
+  //   // else{
 
-    }
+  //   // }
 
-    setResult(result + 1);
-
-  };
+  //   setResult(result + 1);
+  // };
   return (
-    <section id="calculator" data-aos>
+    <section id="calculator">
       <div className="myContainer">
         <Title value="KALKULYATOR" isWhite />
         <div className="summary">
@@ -55,34 +59,52 @@ export const Calculator = () => {
         <div className="flex-row">
           <div className="form-container">
             <p>Ölkə, çəki məlumatlarını daxil edin və HESABLA düyməsinə sıxın.</p>
-            <form onSubmit={handleSubmit}>
-              <CustomSelect options={options} label="Ölkə:" />
+            <form onSubmit={handleSubmit(onSubmit)}>
+              {/* <Controller
+                  render={(field) => <CustomSelect options={options} {...field} label="Ölkə:"  />}
+                  name="country"
+                  control={control}
+                  rules={{
+                    required: true,
+                  }}
+                /> */}
+              <Controller
+                name="country"
+                control={control}
+                rules={{ required: true }}
+                render={(props) => <CustomSelect options={options} label="Ölkə:" {...props} />}
+              />
+
               <div className="volume_components">
                 <label>
-                  Uzunluq (sm):
-                  <input type="text" name="length" className="text_input" ref={lengthRef} />
+                  <span>Uzunluq (sm):</span>
+                  <input type="text" className="text_input" {...register('length', { required: true })} />
                 </label>
                 <label className="central">
-                  Eni (sm):
-                  <input type="text" name="width" className="text_input" ref={widthRef} />
+                  <span>Eni (sm):</span>
+                  <input type="text" className="text_input" {...register('width', { required: true })} />
                 </label>
                 <label>
-                  Hündürlük (sm):
-                  <input type="text" name="height" className="text_input" ref={heightRef} />
+                  <span>Hündürlük (sm):</span>
+                  <input type="text" className="text_input" {...register('height', { required: true })} />
                 </label>
               </div>
               <div className="weight">
-                <CustomSelect options={units} label="Çəki vahidi " />
+                <CustomSelect
+                  options={units}
+                  label="Çəki vahidi "
+                  {...register('unitWeight', { required: true })}
+                />
                 <div className="weight_container">
                   <label>
-                    Çəki:
-                    <input type="text" name="weight" className="text_input" ref={weightRef}/>
+                    <span>Çəki:</span>
+                    <input type="text" className="text_input" {...register('weight', { required: true })} />
                   </label>
                 </div>
               </div>
               <div className="calculation">
-                <ValuePrinter resultValue={result}/>
-                <CalculatorButton onCalculate={onCalculate}/>
+                <ValuePrinter resultValue={result} />
+                <CalculatorButton />
               </div>
             </form>
           </div>

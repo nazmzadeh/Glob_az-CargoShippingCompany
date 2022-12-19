@@ -25,9 +25,13 @@
         color: $main_color;
         font-size: 1.2rem;
       }
+      span{
+        color: $text-color;
+      }
       .volume_components {
         display: flex;
         margin-top: 20px;
+
         label.central {
           margin: 0px 25px;
         }
