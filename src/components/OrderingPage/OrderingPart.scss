@@ -75,7 +75,13 @@
 .product-number {
   margin-bottom: 25px;
   color: black;
-  font-size: 24px;
+  font-size: 24px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-number span {
+  font-size: 24px !important;
 }
 
 .form-bottom {
@@ -161,4 +167,23 @@
 .sifaris {
   box-shadow: 0 6px 12px 0 rgb(0 0 0 / 16%);
   padding: 20px;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.close-order-button {
+  background: $close-order-color;
+  border: 0;
+  border-radius: 50%;
+  height: 23px;
+  width: 23px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
 }

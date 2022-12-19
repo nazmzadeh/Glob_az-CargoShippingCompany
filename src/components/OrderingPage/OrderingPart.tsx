@@ -1,6 +1,7 @@
 import './OrderingPart.scss';
 import { OrderingForm } from '../OrderingForm/OrderingForm';
 import { useState } from 'react';
+import x from './x.svg';
 
 export const OrderingPart = () => {
   const [count, setCount] = useState(1);
@@ -10,68 +11,52 @@ export const OrderingPart = () => {
 
   const [{ items }, setItems] = useState({ items: [<></>] });
   const addItem = () => {
-    items.push(<div key={items.length}><OrderingForm /></div>);
+    items.push(
+      <div key={items.length}>
+        <div className="form-inside">
+          <div className="product-number">
+            <div>
+              Məhsul # <span>{count}</span>
+            </div>
+            {count > 0 && (
+              <div className="close-order">
+                <button className="close-order-button">
+                  <img src={x} alt="" />
+                </button>
+              </div>
+            )}
+          </div>
+          <OrderingForm />
+        </div>
+      </div>,
+    );
     setItems({ items: [...items] });
   };
-
-  // return (
-  //   <div>
-  //     <button onClick={addItem} />
-  //     {items}
-  //   </div>
-  // );
 
   return (
     <>
       <div className="sifaris">
-        {/* <form className="sifaris-form">
-          <div className="sifarish-top">
-            <h4>Sifariş et</h4>
-          </div>
+        <div className="sifarish-top">
+          <h4>Sifariş et</h4>
+        </div>
+        <div className="form-list">
+          {items}
           <div className="form-inside">
             <div className="product-number">
-              Məhsul # <span>{count}</span>{' '}
+              <div>
+                Məhsul # <span>{count}</span>
+              </div>
+              {count > 1 && (
+                <div className="close-order">
+                  <button className="close-order-button">
+                    <img src={x} alt="" />
+                  </button>
+                </div>
+              )}
             </div>
-            <div className="products">
-              <div className="link-div">
-                <label htmlFor="link">Məhsulun linki</label>
-                <input type="text" id="link" />
-              </div>
-              <div className="second-row">
-                <div className="product-price">
-                  <label htmlFor="price">Məhsulun qiyməti</label>
-                  <input type="text" id="price" />
-                </div>
-                <div className="product-count">
-                  <label htmlFor="count">Məhsulun sayı</label>
-                  <input type="text" id="count" placeholder="1" />
-                </div>
-                <div className="product-cargo">
-                  <label htmlFor="cargo">Türkiyə daxili karqo</label>
-                  <input type="text" id="cargo" placeholder="0" />
-                </div>
-              </div>
-              <div className="third-row">
-                <div className="product-color">
-                  <label htmlFor="color">Məhsulun rəngi</label>
-                  <input type="text" id="color" />
-                </div>
-                <div className="product-size">
-                  <label htmlFor="size">Məhsulun ölçüsü</label>
-                  <input type="text" id="size" />
-                </div>
-              </div>
-            </div>
-            <div className="form-bottom">
-              <div className="urgent-order">
-                <input type="checkbox" id="urgent-checkbox" />
-                <label htmlFor="urgent-checkbox">Təcili sifariş (+ 2$)</label>
-              </div>
-              <div className="final-price">+5% = 0 TL</div>
-            </div>
+            <OrderingForm />
           </div>
-        </form> */}
-        <OrderingForm />
+        </div>
         <div className="sifaris-bottom">
           <button
             className="add-product"
@@ -80,7 +65,6 @@ export const OrderingPart = () => {
               addItem();
             }}
           >
-            {items}
             + Yeni link əlavə et
           </button>
         </div>
