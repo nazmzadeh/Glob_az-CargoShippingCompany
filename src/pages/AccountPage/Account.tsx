@@ -1,7 +1,7 @@
 import './Account.scss';
 import { AccountMoneyBarTop } from '../../components/AccountMoneyBarTop/AccountMoneyBarTop';
 import { OrderingPart } from '../../components/OrderingPage/OrderingPart';
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import { SideNavBar } from '../../components/SideNavBar/SideNabBar';
 import { SideNavBarTop } from '../../components/AccountSideBarTop/AccountSideBarTop';
 
@@ -16,9 +16,10 @@ export const AccountPage = () => {
           </div>
           <div className="col-md-9 account-main">
             <AccountMoneyBarTop />
-            <Routes>
+            <Outlet />
+            {/* <Routes>
               <Route path="/ordering-part" element={<OrderingPart />} />
-            </Routes>
+            </Routes> */}
           </div>
         </div>
       </div>

@@ -124,16 +124,14 @@ export const Header = () => {
             {currentUserState.currentUser && (
               <div className="header-cart">
                 <Link to="account-page" className="cart-icon">
-                  {/* <img src={cart} alt="" /> */}
                   <span className="basket-count">0</span>
                 </Link>
                 <Link to="account-page" className="btn btn-beyan desktop-only">
                   Bəyan Et
                 </Link>
-                <Link to="ordering-part" className="btn btn-sifarish desktop-only">
+                <Link to="/account-page/ordering-part" className="btn btn-sifarish desktop-only">
                   <span className="no-wrap">+ Sifariş</span> Et
                 </Link>
-                {/* nav bar */}
               </div>
             )}
             <nav className="navBar mobile-only">
