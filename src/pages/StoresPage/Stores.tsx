@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import './Stores.scss';
 import { StoresPart } from './components/StoresPart/StoresPart';
 

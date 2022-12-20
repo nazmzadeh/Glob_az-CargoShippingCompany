@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import './Home.scss';
 import { Calculator } from './components/Calculator/Calculator';
 import { HeroSlider, ISlide } from './components/Hero-Slider/HeroSlider';

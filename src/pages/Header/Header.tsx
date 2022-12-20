@@ -1,4 +1,5 @@
 import './Header.scss';
+import '../../components/OrderingPage/OrderingPart';
 import { Link } from 'react-router-dom';
 import { LogInUserPayload, logInUser, logOutUser } from '../../app/currentUserSlice';
 import { RootState } from '../../app/store';
@@ -13,6 +14,8 @@ import noPhoto from './nophoto.jpg';
 import phone from './phone.svg';
 
 export const Header = () => {
+  const [cartCount, setCartCount] = useState(0);
+
   const currentUserState = useSelector((state: RootState) => state.currentUser);
   const dispatch = useDispatch();
   const user: UserResponse = {
@@ -124,7 +127,7 @@ export const Header = () => {
               <div className="header-cart">
                 <Link to="account-page" className="cart-icon">
                   {/* <img src={cart} alt="" /> */}
-                  <span className="basket-count">0</span>
+                  <span className="basket-count">{cartCount}</span>
                 </Link>
                 <Link to="account-page" className="btn btn-beyan desktop-only">
                   Bəyan Et

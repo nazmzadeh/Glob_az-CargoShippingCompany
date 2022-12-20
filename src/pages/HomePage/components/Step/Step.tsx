@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Step.scss';
 import { Title } from '../TitleofSection/Title';
