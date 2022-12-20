@@ -1,2 +1,102 @@
+@import '~bootstrap/scss/bootstrap';
 @import '../../variables';
-@import '../../mixins';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+#faq {
+  background-color: #f8f8f8;
+  .container {
+    .col-lg-12 {
+      padding-top: 15px;
+
+      .first-list {
+        display: flex;
+
+        padding-inline-start: 30px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-bottom: 5px;
+
+        li {
+          font-family: 'SEGOEUI', sans-serif;
+          list-style-type: none;
+          color: #707070;
+          font-size: 1rem;
+          vertical-align: middle;
+          text-align: -webkit-match-parent;
+          img {
+            padding-left: 20px;
+          }
+
+          a {
+            color: #707070;
+            text-decoration: none;
+            transition: all 0.2s;
+          }
+          a:hover {
+            color: $orange-theme;
+          }
+        }
+        .second-li {
+          padding-left: 23px;
+        }
+      }
+    }
+    .col-lg-12 {
+      .section-title {
+        font-family: 'SEGUISB', sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        color: #363636;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        line-height: 2;
+        &::after {
+          content: '';
+          background-color: $orange-theme;
+          height: 3px;
+          width: 4%;
+          position: absolute;
+          border-radius: 5px;
+          left: 50%;
+          bottom: 0;
+        }
+      }
+    }
+    .col-lg-12 {
+      .first-accor {
+        padding-bottom: 150px;
+        margin-top: -40px;
+      }
+      .accor {
+        border: solid 1px #ebebeb;
+        color: #707070;
+
+        .accor-body {
+          color: #363636;
+          font-size: 0.8rem;
+        }
+      }
+
+      .accor :hover {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 770px) {
+  #faq {
+    .container {
+      .col-lg-12 {
+        .section-title {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,cAAc,CAAA;EACV,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM;CAQjB;;AAVD,AAGQ,cAHM,CAGN,aAAa,CAAA;EACT,gBAAgB,ECJf,OAAO;CDKX;;AALT,AAMQ,cANM,CAMN,cAAc,CAAA;EACV,gBAAgB,ECPf,OAAO;CDQX;;AAGT,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,cAAc,CAAA;IACV,KAAK,EAAE,IAAI;GACd",
+    "sources": [
+        "../CustomSelect/CustomSelect.scss",
+        "../../../../../../_variables.scss"
+    ],
+    "names": [],
+    "file": "CustomSelect.css"
+}

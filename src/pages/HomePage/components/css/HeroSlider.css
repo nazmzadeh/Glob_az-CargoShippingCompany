@@ -1,0 +1,52 @@
+#hero {
+  text-align: left;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#hero .hero-slider-wrapper {
+  max-height: 670px !important;
+}
+
+#hero img {
+  width: 700px;
+  height: 415px;
+}
+
+#hero .slider_caption {
+  margin-top: 30px;
+  max-width: 24rem;
+}
+
+#hero .slider_caption a {
+  color: white;
+}
+
+.hero-slider-slide-background {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff7700), to(#ffa600));
+  background: linear-gradient(#ff7700, #ffa600);
+}
+
+@media screen and (max-width: 990px) {
+  #hero .slider_caption {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  #hero .slider_caption a {
+    font-size: .7rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #hero img {
+    display: none;
+  }
+  #hero .slider_caption {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  #hero .slider_caption a {
+    font-size: .7rem;
+  }
+}
+/*# sourceMappingURL=HeroSlider.css.map */

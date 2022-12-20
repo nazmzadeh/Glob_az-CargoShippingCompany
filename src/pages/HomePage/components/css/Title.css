@@ -1,0 +1,15 @@
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.title_white {
+  color: white;
+}
+
+@media screen and (max-width: 860px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=Title.css.map */

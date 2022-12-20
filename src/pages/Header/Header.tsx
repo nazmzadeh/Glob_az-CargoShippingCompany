@@ -33,11 +33,13 @@ export const Header = () => {
               </div>
             </div>
             <div className="header-top-right">
-              <Link to="account-page" className="inline cboxElement">Daxil ol</Link>
+              <Link to="Daxil ol" className="inline cboxElement">
+                Daxil ol
+              </Link>
               <span className="random">/</span>
-              <a href="/az/signup.html" title="">
+              <Link to="Qeydiyyat" className="inline cboxElement">
                 Qeydiyyat
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -54,7 +56,7 @@ export const Header = () => {
             <div className="headerMenu desktopOnly">
               <ul className="headerList">
                 <li>
-                  <Link to={"tarifler"}>Tariflər</Link>
+                  <Link to={'tarifler'}>Tariflər</Link>
                 </li>
                 <li>
                   <Link to={'Magazalar'}>Mağazalar</Link>

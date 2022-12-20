@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAA;EACF,UAAU,EAAE,KAAK;CAYpB;;AAbD,AAEI,MAFE,CAEF,gBAAgB,CAAA;EACZ,MAAM,EAAE,MAAM;EACd,WAAW,ECNP,UAAU,EAAE,MAAM,EAAE,MAAM,EAAE,OAAO,EAAE,UAAU;EDOnD,SAAS,EAAE,MAAM;EACjB,UAAU,EAAE,IAAI;CAMnB;;AAZL,AAOQ,MAPF,CAEF,gBAAgB,CAKZ,UAAU,CAAA;EACN,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,MAAM;CACjB",
+    "sources": [
+        "../Shops/Shops.scss",
+        "../../../../_variables.scss"
+    ],
+    "names": [],
+    "file": "Shops.css"
+}

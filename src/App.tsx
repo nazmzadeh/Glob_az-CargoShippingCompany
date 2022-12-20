@@ -10,6 +10,8 @@ import { SideNavBar } from './components/SideNavBar/SideNabBar';
 import { AccountPage } from './pages/AccountPage/Account';
 import { Confidentiality } from './pages/ConfidentialityPage/Confidentiality';
 import { Contact } from './pages/ContactPage/Contact';
+import Faq from './pages/FaqPage/Faq';
+import { Register } from './pages/RegisterPage/Register';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/Mexfilik" element={<Confidentiality />} />
           <Route path="/account-page" element={<AccountPage />} />
           <Route path="/Əlaqə" element={<Contact />} />
+          <Route path="/Faq" element={<Faq />} />
+          <Route path="/Qeydiyyat" element={<Register />} />
         </Routes>
         {/* <Tariffs />
         

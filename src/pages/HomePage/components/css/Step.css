@@ -1,0 +1,71 @@
+.myContainer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.myContainer img:not(.main_img) {
+  height: 70px;
+  width: 70px;
+}
+
+.myContainer h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.myContainer .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myContainer .flex-row .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-top: 50px;
+}
+
+.myContainer .flex-row .step .text {
+  max-width: 480px;
+  margin-left: 30px;
+}
+
+.myContainer .flex-row .step .text p, .myContainer .flex-row .step .text a {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 860px) {
+  #step .myContainer {
+    text-align: center;
+  }
+  #step .myContainer h2 {
+    font-size: 18px;
+  }
+  #step .myContainer .flex-row {
+    padding: 0 1rem;
+  }
+  #step .myContainer .flex-row .main_img {
+    display: none;
+  }
+  #step .myContainer .flex-row img {
+    height: 70px;
+    width: 40px;
+  }
+  #step .myContainer .flex-row p, #step .myContainer .flex-row a {
+    font-size: 0.6rem;
+  }
+}
+/*# sourceMappingURL=Step.css.map */

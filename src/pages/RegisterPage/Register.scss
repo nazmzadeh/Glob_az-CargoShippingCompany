@@ -1,0 +1,57 @@
+@import '../../variables';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+#register {
+  .container {
+    .col-lg-12 {
+      padding-top: 15px;
+
+      .first-list {
+        display: flex;
+
+        padding-inline-start: 30px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-bottom: 5px;
+
+        li {
+          font-family: 'SEGOEUI', sans-serif;
+          list-style-type: none;
+          color: #707070;
+          font-size: 1rem;
+          vertical-align: middle;
+          text-align: -webkit-match-parent;
+          img {
+            padding-left: 20px;
+          }
+
+          a {
+            color: #707070;
+            text-decoration: none;
+            transition: all 0.2s;
+          }
+          a:hover {
+            color: $orange-theme;
+          }
+        }
+        .second-li {
+          padding-left: 23px;
+        }
+      }
+    }
+    .col-lg-12 {
+      .row {
+        .col-lg-4 {
+          img {
+            max-width: 420px;
+          }
+        }
+      }
+    }
+  }
+}

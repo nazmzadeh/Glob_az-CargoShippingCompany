@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#contact {
+  background-color: #f8f8f8;
+}
+
+#contact .container {
+  padding-left: 0px;
+}
+
+#contact .container iframe {
+  width: 100%;
+  min-height: 600px;
+}
+
+#contact .container .col-lg-12 {
+  padding-top: 15px;
+}
+
+#contact .container .col-lg-12 .first-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  padding-bottom: 5px;
+}
+
+#contact .container .col-lg-12 .first-list li {
+  font-family: 'SEGOEUI', sans-serif;
+  list-style-type: none;
+  color: #707070;
+  font-size: 1rem;
+  vertical-align: middle;
+  text-align: -webkit-match-parent;
+}
+
+#contact .container .col-lg-12 .first-list li img {
+  padding-left: 20px;
+}
+
+#contact .container .col-lg-12 .first-list li a {
+  color: #707070;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#contact .container .col-lg-12 .first-list li a:hover {
+  color: #ffa600;
+}
+
+#contact .container .col-lg-12 .first-list .second-li {
+  padding-left: 23px;
+}
+
+#contact .container .col-lg-12 .section-title {
+  font-family: 'SEGUISB', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #363636;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 2;
+}
+
+#contact .container .col-lg-12 .section-title::after {
+  content: '';
+  background-color: #ffa600;
+  height: 3px;
+  width: 4%;
+  position: absolute;
+  border-radius: 5px;
+  left: 50%;
+  bottom: 0;
+}
+
+#contact .container .col-lg-12 h3 {
+  padding-left: 36px;
+  font-family: 'SEGUISB', sans-serif;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  margin-bottom: 2.66667rem;
+  font-weight: 550;
+}
+
+#contact .container .col-lg-12 .contact-list {
+  list-style-type: none;
+}
+
+#contact .container .col-lg-12 .contact-list .mail a img {
+  margin-right: 20px;
+  width: 20px;
+}
+
+#contact .container .col-lg-12 .contact-list .phone a img {
+  margin-right: 20px;
+}
+
+#contact .container .col-lg-12 .contact-list li {
+  text-align: -webkit-match-parent;
+}
+
+#contact .container .col-lg-12 .contact-list li a {
+  text-decoration: none;
+  color: #707070;
+  font-family: 'SEGOEUI', sans-serif;
+  line-height: 2.5;
+  font-weight: 400px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#contact .container .col-lg-12 .contact-list li a b {
+  color: #000;
+  font-weight: bolder;
+  padding-left: 26px;
+}
+
+#contact .container .col-lg-12 .contact-socials {
+  margin-top: 1.66667rem;
+  padding-bottom: 100px;
+  padding-left: 32px;
+}
+
+#contact .container .col-lg-12 .contact-socials ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+#contact .container .col-lg-12 .contact-socials ul li {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+#contact .container .col-lg-12 .contact-socials ul li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  padding-left: 11px;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-shadow: 0 3px 6px 0 #b3afaf;
+          box-shadow: 0 3px 6px 0 #b3afaf;
+}
+
+#contact .container .col-lg-12 .contact-socials ul li a img {
+  color: #7a82a6;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#contact .container .col-lg-12 .contact-socials ul li a:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 780px) {
+  #contact .container .col-lg-12 h3 {
+    font-size: 1rem;
+  }
+  #contact .container .col-lg-12 .section-title {
+    font-size: 25px;
+  }
+  #contact .container .col-lg-12 .contact-list li a {
+    font-size: 0.7rem;
+  }
+}
+/*# sourceMappingURL=Contact.css.map */

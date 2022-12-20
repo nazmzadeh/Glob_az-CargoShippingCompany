@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,CAAA;EACE,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;CAEnB;;AACD,AAAA,YAAY,CAAA;EACR,KAAK,EAAE,KAAK;CACf;;AACD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAE9B,AAAA,EAAE,CAAA;IACC,SAAS,EAAE,IAAI;GAGlB",
+    "sources": [
+        "../TitleofSection/Title.scss"
+    ],
+    "names": [],
+    "file": "Title.css"
+}

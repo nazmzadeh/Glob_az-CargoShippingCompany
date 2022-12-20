@@ -1,0 +1,17 @@
+.shops {
+  min-height: 160px;
+}
+
+.shops .slick_container {
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1400px;
+  margin-top: 35px;
+}
+
+.shops .slick_container .slick_img {
+  width: 175px;
+  height: 130px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=Shops.css.map */
