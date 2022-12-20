@@ -17,20 +17,12 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/*    <Route path="messages" element={<DashboardMessages />} />
-            <Route path="tasks" element={<DashboardTasks />} />
-          </Route> */}
+
           <Route path="/tarifler" element={<Tariffs />} />
           <Route path="/Magazalar" element={<Stores />} />
           <Route path="/Mexfilik" element={<Confidentiality />} />
-          <Route path="/account-page" element={<AccountPage/>} />
+          <Route path="/account-page" element={<AccountPage />} />
         </Routes>
-        {/* <Tariffs />
-        
-        <Stores />
-        <Faq />
-        <Contact />
-        <Confidentiality /> */}
       </main>
       <Footer />
     </div>

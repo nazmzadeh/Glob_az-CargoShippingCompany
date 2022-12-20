@@ -26,7 +26,12 @@ export const OrderingPart = () => {
           <h4>Sifariş et</h4>
         </div>
         {goods.map((item, index) => (
-          <OrderingForm key={index} blockCount={index + 1} {...item} onRemoveGood={() => onRemoveGood(index)} />
+          <OrderingForm
+            key={index}
+            blockCount={index + 1}
+            {...item}
+            onRemoveGood={() => onRemoveGood(index)}
+          />
         ))}
         <div className="sifaris-bottom">
           <button
@@ -46,9 +51,7 @@ export const OrderingPart = () => {
             Toplam ödəniləcək məbləğ: <span className="final-price"> &nbsp; 0 TL</span>
           </span>
           <div className="random-buttons">
-            {/* <button className="sebete-at" onClick={addToCart}>
-              Səbətə at
-            </button> */}
+            <button className="sebete-at">Səbətə at</button>
             <button className="odenish">Birbaşa ödənişə keç</button>
           </div>
         </div>
