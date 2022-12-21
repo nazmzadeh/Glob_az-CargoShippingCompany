@@ -2,48 +2,30 @@ import './Calculator.scss';
 import { CustomSelect } from '../Calculator/components/CustomSelect/CustomSelect';
 import { Title } from '../TitleofSection/Title';
 // import airplaneImg from '../Calculator/images/calculator.png';
-import { FormEvent, useState } from 'react';
 import { CalculatorButton } from './components/CalculatorButton';
-import { ValuePrinter } from './components/ValuePrinter';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { ValuePrinter } from './components/ValuePrinter';
+import { useState } from 'react';
+import { Calculate } from './Calculate';
 
 const options = [{ value: 'Türkiyə', label: 'Türkiyə' }];
 const units = [
   { value: 'kq', label: 'kq' },
   { value: 'q', label: 'q' },
 ];
-type CalculateFormData = {
+export type CalculateFormData = {
   country: string;
-  length: string;
-  width: string;
-  height: string;
+  length: number;
+  width: number;
+  height: number;
   unitWeight: string;
-  weight: string;
+  weight: number;
 };
 
 export const Calculator = () => {
   const { register, handleSubmit, control } = useForm<CalculateFormData>();
-
-  const onSubmit: SubmitHandler<CalculateFormData> = (data) => console.log(data);
-
-  // const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  // };
-
-  const [result, setResult] = useState(0);
-  // const onCalculate = (length: number, width: number, height: number) => {
-  //   let lastResult = 0;
-  //   let physicalWeight = 0;
-  //   const volumetricWeight = length * width * height;
-  //   if (length >= 60 || width >= 60 || height >= 60) {
-  //     lastResult = volumetricWeight + physicalWeight;
-  //   }
-  //   // else{
-
-  //   // }
-
-  //   setResult(result + 1);
-  // };
+  const onSubmit: SubmitHandler<CalculateFormData> = (data) =>
+    console.log(Calculate(data.length, data.width, data.height, data.weight,data.unitWeight,data.country));
   return (
     <section id="calculator">
       <div className="myContainer">
@@ -60,19 +42,11 @@ export const Calculator = () => {
           <div className="form-container">
             <p>Ölkə, çəki məlumatlarını daxil edin və HESABLA düyməsinə sıxın.</p>
             <form onSubmit={handleSubmit(onSubmit)}>
-              {/* <Controller
-                  render={(field) => <CustomSelect options={options} {...field} label="Ölkə:"  />}
-                  name="country"
-                  control={control}
-                  rules={{
-                    required: true,
-                  }}
-                /> */}
               <Controller
                 name="country"
                 control={control}
                 rules={{ required: true }}
-                render={(props) => <CustomSelect options={options} label="Ölkə:" {...props} />}
+                render={({ field }) => <CustomSelect options={options} label="Ölkə:" {...field} />}
               />
 
               <div className="volume_components">
@@ -90,10 +64,11 @@ export const Calculator = () => {
                 </label>
               </div>
               <div className="weight">
-                <CustomSelect
-                  options={units}
-                  label="Çəki vahidi "
-                  {...register('unitWeight', { required: true })}
+                <Controller
+                  name="unitWeight"
+                  control={control}
+                  rules={{ required: true }}
+                  render={({ field }) => <CustomSelect options={units} label="Çəki vahidi " {...field} />}
                 />
                 <div className="weight_container">
                   <label>
@@ -103,7 +78,7 @@ export const Calculator = () => {
                 </div>
               </div>
               <div className="calculation">
-                <ValuePrinter resultValue={result} />
+                {/* <ValuePrinter resultValue={onSubmit()} /> */}
                 <CalculatorButton />
               </div>
             </form>

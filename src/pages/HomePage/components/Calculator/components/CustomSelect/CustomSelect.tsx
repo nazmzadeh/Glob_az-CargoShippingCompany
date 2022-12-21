@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
+import { ControllerRenderProps } from 'react-hook-form';
 import Select from 'react-select';
 
 import './CustomSelect.scss';
 
-interface ISelectProps {
+interface ISelectProps extends ControllerRenderProps {
   label: string;
   options: ISelectItem[];
 }
@@ -12,17 +13,16 @@ interface ISelectItem {
   label: string;
 }
 
-export const CustomSelect = (props: ISelectProps) => {
-  const { options, label } = props;
-  const [selectedOption, setSelectedOption] = useState<ISelectItem | null>();
+export const ControllerComponent = (props: ISelectProps) => {
+  const { options, label, onChange, value } = props;
 
   return (
     <div className="custom_select">
       <label>{label}</label>
       <Select
-        defaultValue={selectedOption}
+        defaultValue={value}
         options={options}
-        onChange={setSelectedOption}
+        onChange={onChange}
         isMulti={false}
         classNamePrefix="select"
         classNames={{
@@ -32,3 +32,5 @@ export const CustomSelect = (props: ISelectProps) => {
     </div>
   );
 };
+
+export const CustomSelect = forwardRef(ControllerComponent);

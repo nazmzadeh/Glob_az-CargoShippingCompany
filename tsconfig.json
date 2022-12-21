@@ -21,6 +21,12 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    ".eslintrc.js",
+    "src/pages/HomePage/components/Calculator/Calculate.ts",
+    "src/pages/HomePage/components/Calculator/Calculate.js",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "next-env.d.ts"
   ]
 }
