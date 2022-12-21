@@ -1,5 +1,6 @@
 import './Account.scss';
 import { AccountMoneyBarTop } from '../../components/AccountMoneyBarTop/AccountMoneyBarTop';
+import { Beyan } from '../../components/BeyanEtPart/Beyan';
 import { SideNavBar } from '../../components/SideNavBar/SideNabBar';
 import { SideNavBarTop } from '../../components/AccountSideBarTop/AccountSideBarTop';
 
@@ -14,6 +15,7 @@ export const AccountPage = () => {
           </div>
           <div className="col-md-9 account-main">
             <AccountMoneyBarTop />
+            <Beyan />
           </div>
         </div>
       </div>
