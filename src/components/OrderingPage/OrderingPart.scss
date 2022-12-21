@@ -1,0 +1,190 @@
+@import '../../variables';
+
+.sifarish-top h4 {
+  font-size: 21px;
+  color: $orange-theme;
+  margin-bottom: 10px;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+}
+
+.products label {
+  color: $link-color;
+  font-size: 15px;
+  display: flex;
+  margin-bottom: 7px;
+}
+
+.link-div {
+  margin-bottom: 25px;
+}
+
+.second-row {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-row {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-inside {
+  background-color: $mex-bg-color;
+  padding: 15px 10px 15px 10px;
+  margin-bottom: 20px;
+}
+
+.products input {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  outline: none;
+  padding: 10px;
+}
+
+.product-size {
+  width: 100vh;
+  margin-left: 3vh;
+}
+
+.product-color {
+  width: 100vh;
+}
+
+.product-price {
+  width: 100vh;
+}
+
+.product-count {
+  width: 100vh;
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+
+.product-cargo {
+  width: 100vh;
+}
+
+.product-number {
+  margin-bottom: 25px;
+  color: black;
+  font-size: 24px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-number span {
+  font-size: 24px !important;
+}
+
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.final-price {
+  text-align: right;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.urgent-order {
+  display: flex;
+  align-items: center;
+}
+
+.urgent-order label {
+  color: $link-color;
+  margin-left: 10px;
+}
+
+.urgent-order input {
+  width: 20px;
+  height: 20px;
+}
+
+.add-product {
+  border: 0px;
+  background-color: white;
+  color: $greenish-color;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+.sifaris-bottom {
+  border-bottom: 1px rgba(0, 0, 0, 0.1) dashed;
+}
+
+.random-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.random-text {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.final-price {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 19px;
+  color: $price-color;
+}
+
+.sebete-at {
+  background: $main_color;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px 40px 15px 40px;
+}
+
+.odenish {
+  background: $greenish-color;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px 40px 15px 40px;
+}
+
+.sifaris {
+  box-shadow: 0 6px 12px 0 rgb(0 0 0 / 16%);
+  padding: 20px;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.close-order-button {
+  background: $close-order-color;
+  border: 0;
+  border-radius: 50%;
+  height: 23px;
+  width: 23px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}

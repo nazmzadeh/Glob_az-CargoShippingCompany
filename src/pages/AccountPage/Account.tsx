@@ -1,6 +1,8 @@
 import './Account.scss';
 import { AccountMoneyBarTop } from '../../components/AccountMoneyBarTop/AccountMoneyBarTop';
 import { Beyan } from '../../components/BeyanEtPart/Beyan';
+import { OrderingPart } from '../../components/OrderingPage/OrderingPart';
+import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import { SideNavBar } from '../../components/SideNavBar/SideNabBar';
 import { SideNavBarTop } from '../../components/AccountSideBarTop/AccountSideBarTop';
 
@@ -16,6 +18,10 @@ export const AccountPage = () => {
           <div className="col-md-9 account-main">
             <AccountMoneyBarTop />
             <Beyan />
+            <Outlet />
+            {/* <Routes>
+              <Route path="/ordering-part" element={<OrderingPart />} />
+            </Routes> */}
           </div>
         </div>
       </div>
