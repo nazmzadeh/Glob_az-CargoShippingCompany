@@ -1,3 +1,5 @@
+
+
 import './TariffsPart.scss';
 import turk from './turkey.svg';
 
@@ -5,6 +7,22 @@ export const Shops = () => {
   return (
     <>
       <div className="body-inside">
+        <div className="container">
+          <div className="breadcrumb">
+            <ul>
+              <li>
+                <a href="/" title="">
+                  Ana səhifə
+                </a>
+              </li>
+              <li>
+                <a href="/" title="">
+                  Tariflər
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <section className="tariff">
           <h1 className="section-title">Tariflər</h1>
           <div className="container">
@@ -226,7 +244,7 @@ export const Shops = () => {
           </div>
         </section>
       </div>
-      <div className="desktop-show">
+      <div className="desktop-show br1" >
         <br />
         <br />
         <br />

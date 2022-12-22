@@ -1,0 +1,16 @@
+@import '../../../../variables';
+
+.shops{
+    min-height: 160px;
+    .slick_container{
+        margin: 0 auto;
+        font-family: $main_font;
+        max-width: 1400px;
+        margin-top: 35px;
+        .slick_img{
+            width: 175px;
+            height: 130px;
+            margin: 0 auto;
+        }
+    }
+}

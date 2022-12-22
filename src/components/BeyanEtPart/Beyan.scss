@@ -1,0 +1,133 @@
+@import '../../variables';
+@import '../../mixins';
+
+.beyan-main {
+  padding: 20px;
+  box-shadow: 0 6px 12px 0 rgb(0 0 0 / 16%);
+}
+
+.beyan-country-item img {
+  width: 50px;
+  height: 30px;
+}
+
+.beyan-country-item {
+  background-color: $beyan-item;
+  width: fit-content;
+  padding: 8px 16px 8px 3px;
+  border: 1px solid $beyan-border-color;
+  border-bottom: 0;
+}
+
+.beyan-country {
+  border-bottom: 1px solid $beyan-border-color;
+  margin-bottom: 20px;
+}
+
+.beyan-title span {
+  font-size: 21px;
+  color: $orange-theme;
+}
+
+.beyan-title {
+  margin-bottom: 20px;
+}
+
+
+
+.display-file {
+  background: 'grey';
+  padding: '5px 10px';
+}
+
+.beyan-row2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 20px;
+  border: dashed 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+.beyan-row2 span {
+  color: $link-color;
+}
+
+.row-inputs {
+  @include form-column;
+}
+
+.beyan-select {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 40px;
+  padding-left: 6px;
+  color: $link-color;
+}
+
+.beyan-row3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.beyan-note {
+  height: 80px;
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.beyan-form-button {
+  background: $orange-theme;
+  color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 160px;
+   height: 50px;
+}
+
+.form-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beyan-row1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .beyan-form-button {
+    width: 100%;
+  }
+  .row-inputs {
+    width: 100%;
+  }
+
+  .beyan-row1 {
+    display: block;
+    label {
+      margin-top: 10px;
+    }
+  }
+
+  .beyan-row3 {
+    display: block;
+    label {
+      margin-top: 10px;
+    }
+  }
+}

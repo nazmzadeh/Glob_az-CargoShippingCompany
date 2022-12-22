@@ -5,14 +5,12 @@ import Subtitle from './components/Subtitle/Subtitle';
 import Title from './components/Title/Title';
 import Wrapper from './components/Wrapper/Wrapper';
 
-
 export interface ISlide {
   id: number;
   title: string;
   subtitle: string;
   caption: string;
   imageSrc: string;
-  
 }
 export interface IHeroSliderProps {
   slides: ISlide[];
@@ -37,7 +35,6 @@ export const HeroSlider = (props: IHeroSliderProps) => {
         className="hero"
       >
         <Overlay>
-
           {slides.map((slide, i) => (
             <Slide key={slide.id} className="sld">
               <Wrapper>
