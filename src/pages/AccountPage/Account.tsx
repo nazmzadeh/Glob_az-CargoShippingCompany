@@ -5,6 +5,8 @@ import { OrderingPart } from '../../components/OrderingPage/OrderingPart';
 import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import { SideNavBar } from '../../components/SideNavBar/SideNabBar';
 import { SideNavBarTop } from '../../components/AccountSideBarTop/AccountSideBarTop';
+import { AccountPhoneButton } from '../../components/AccountPhoneButton/AccountPhoneButton';
+
 
 export const AccountPage = () => {
   return (
@@ -13,6 +15,7 @@ export const AccountPage = () => {
         <div className="row">
           <div className="col-md-3 account-sidebar">
             <SideNavBarTop />
+            <AccountPhoneButton />
             <SideNavBar />
           </div>
           <div className="col-md-9 account-main">
