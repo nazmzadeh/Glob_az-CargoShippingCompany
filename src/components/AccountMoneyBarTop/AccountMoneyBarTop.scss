@@ -1,45 +1,52 @@
-.account-showcase {
-    margin-bottom: 2rem;
-}
+$color_1: #ffffff;
 
-@media (min-width: 768px) {
-    .col-md-4 {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
-    }
-}
-.account-showcase a {
-    width: 100%;
-    height: 6.66667rem;
-    display: block;
-    font-size: 1.06667rem;
-    color: #ffffff;
-    border-radius: 0.33333rem;
-    padding: 1.46667rem 1.33333rem 1.33333rem 6.66667rem;
-    position: relative;
-    box-shadow: 0 6px 12px 0 rgb(0 0 0 / 16%);
-    -webkit-box-shadow: 0 6px 12px 0 rgb(0 0 0 / 16%);
-    -moz-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.16);
-    -ms-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.16);
+
+.account-showcase {
+	margin-bottom: 2rem;
+	a {
+		width: 100%;
+		height: 6.66667rem;
+		display: block;
+		font-size: 1.06667rem;
+		color: $color_1;
+		border-radius: 0.33333rem;
+		padding: 1.46667rem 1.33333rem 1.33333rem 6.66667rem;
+		position: relative;
+		box-shadow: 0 6px 12px 0 rgb(0 0 0 / 16%);
+		-webkit-box-shadow: 0 6px 12px 0 rgb(0 0 0 / 16%);
+		-moz-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.16);
+		-ms-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.16);
+	}
 }
 .account-showcase-shopping {
-    background: #ff9f1a;
+	background: #ff9f1a;
 }
 .account-showcase-balance {
-    background: #1abc9c;
+	background: #1abc9c;
 }
 .account-showcase-parcel {
-    background: #2ecc71;
+	background: #2ecc71;
 }
 .account-showcase-count {
-    font-family: "SEGUISB", sans-serif;
-    font-size: 1.2rem;
-    display: block;
-    margin-top: 0.2rem;
+	font-size: 1.2rem;
+	display: block;
+	margin-top: 0.2rem;
+}
+@media (min-width: 768px) {
+	.col-md-4 {
+		flex: 0 0 33.33333%;
+		max-width: 33.33333%;
+	}
 }
 @media only screen and (max-width: 768px) {
-    .desktop-show {
-        display: none;
-    }
+	.desktop-show {
+		display: none;
+	}
+	.account-showcase {
+		a {
+			height: 4.66667rem;
+			border-radius: 0.33333rem;
+			padding: 0.46667rem 0.33333rem 0.33333rem 5.66667rem;
+		}
+	}
 }
-
