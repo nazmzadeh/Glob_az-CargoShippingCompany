@@ -7,7 +7,6 @@ import { SideNavBar } from '../../components/SideNavBar/SideNabBar';
 import { SideNavBarTop } from '../../components/AccountSideBarTop/AccountSideBarTop';
 import { AccountPhoneButton } from '../../components/AccountPhoneButton/AccountPhoneButton';
 
-
 export const AccountPage = () => {
   return (
     <div className="account">
