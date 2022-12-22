@@ -9,7 +9,7 @@ export const AccountPhoneButton = () => {
           Bəyan et
         </a>
         <a href="/links/create?lang=az" className="btn btn-orange order-btn" title="">
-          + Sifariş et
+          <span className="no-wrap">+ Sifariş</span> et
         </a>
       </div>
     </>

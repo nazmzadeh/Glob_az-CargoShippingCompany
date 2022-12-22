@@ -11,6 +11,7 @@ import React from 'react';
 
 import { OrderingPart } from './components/OrderingPage/OrderingPart';
 import { Beyan } from './components/BeyanEtPart/Beyan';
+import { Cart } from './components/Cart/Cart';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="account-page" element={<AccountPage />}>
             <Route path="ordering-part" element={<OrderingPart />} />
             <Route path="beyan-part" element={<Beyan />} />
+            <Route path="cart-part" element={<Cart />} />
           </Route>
         </Routes>
       </main>

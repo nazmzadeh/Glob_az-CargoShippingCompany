@@ -1,0 +1,50 @@
+@import '../../variables';
+@import '../../mixins';
+
+.cart-main-div {
+    padding: 1.33333rem 1.33333rem;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px 0 rgb(0 0 0 / 16%);
+}
+
+.btn-link {
+    font: $main_font;
+    font-weight: 600;
+    margin-left: 40px;
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    display: block;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn-sifarish {
+    border: 1px $orange-theme solid;
+    background-color: $orange-theme;
+    color: white !important;
+    height: auto;
+    line-height: 24px;
+  }
+
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cart-label {
+    font-family: $main_font;
+    font-size: 21px;
+    color: $orange-theme;
+  }
+
+  .cart-content {
+    color: $violet;
+    border: 1px dotted $violet;
+    border-radius: 5px;
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }

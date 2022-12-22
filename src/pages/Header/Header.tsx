@@ -123,15 +123,17 @@ export const Header = () => {
             </div>
             {currentUserState.currentUser && (
               <div className="header-cart">
-                <Link to="account-page" className="cart-icon">
+                <Link to="/account-page/cart-part" className="cart-icon">
                   <span className="basket-count">0</span>
                 </Link>
-                <Link to="/account-page/beyan-part" className="btn-link btn-beyan desktop-only">
-                  Bəyan Et
-                </Link>
-                <Link to="/account-page/ordering-part" className="btn-link btn-sifarish desktop-only">
-                  <span className="no-wrap">+ Sifariş</span> Et
-                </Link>
+                <div className="desktop-only random-flex">
+                  <Link to="/account-page/beyan-part" className="btn-link btn-beyan desktop-only">
+                    Bəyan Et
+                  </Link>
+                  <Link to="/account-page/ordering-part" className="btn-link btn-sifarish desktop-only">
+                    <span className="no-wrap">+ Sifariş</span> Et
+                  </Link>
+                </div>
               </div>
             )}
             <nav className="navBar mobile-only">
