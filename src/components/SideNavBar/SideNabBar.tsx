@@ -13,10 +13,10 @@ export const SideNavBar = () => {
           </a>
         </li>
         <li>
-          <a className="nav-parcel" href="/" title="">
+          <Link className="nav-parcel" to="/account-page/packages-part">
             <img src={borclar} className="sidebar-icon" alt="" />
             Bağlamalar{' '}
-          </a>
+          </Link>
         </li>
         <li>
           <a className="orders   " href="/" title="">
