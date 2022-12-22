@@ -1,0 +1,46 @@
+.store-sidebar {
+    padding: 2rem;
+    background: #eeeeee;
+}
+.store-sidebar h3 {
+    font-family: 'SEGUISB', sans-serif;
+    font-size: 1.6rem;
+    color: #363636;
+    margin-bottom: 1.33333rem;
+    padding-bottom: 1.33333rem;
+    border-bottom: solid 1px #e1e1e1;
+}
+.control-mobile-menu {
+    display: none !important;
+}
+@media (max-width: 1200px){
+h3, .h3 {
+    font-size: calc(1.258rem + 0.096vw);
+}}
+.store-sidebar ul {
+    padding: 0;
+}
+.store-sidebar li {
+    list-style: none;
+    display: block;
+    margin-bottom: 1.33333rem;
+}
+.store-sidebar a {
+    display: block;
+    font-size: 1.13333rem;
+    color: #363636;
+    transition: all 0.2s;
+}
+@media only screen and (max-width: 768px){
+.store-sidebar ul {
+    padding: 1rem;
+    background: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+}}
+@media (min-width: 768px){
+.col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}}
