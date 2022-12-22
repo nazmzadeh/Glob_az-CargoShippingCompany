@@ -19,11 +19,7 @@ export const AccountPage = () => {
           </div>
           <div className="col-md-9 account-main">
             <AccountMoneyBarTop />
-            <Beyan />
             <Outlet />
-            {/* <Routes>
-              <Route path="/ordering-part" element={<OrderingPart />} />
-            </Routes> */}
           </div>
         </div>
       </div>
