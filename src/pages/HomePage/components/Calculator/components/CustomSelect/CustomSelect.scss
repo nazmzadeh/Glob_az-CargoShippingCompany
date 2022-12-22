@@ -1,13 +1,15 @@
 @import '../../../../../../variables';
 
 .custom_select{
-    width: 420px;
     margin: 0 auto;
         .item-focused{
             background-color:$main_color;
         }
         .item-selected{
             background-color: $main_color;
+        }
+        label{
+            color: $text-color;
         }
     
 }

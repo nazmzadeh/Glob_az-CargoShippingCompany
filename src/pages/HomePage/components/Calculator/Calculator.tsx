@@ -1,26 +1,57 @@
 import './Calculator.scss';
-import { CustomSelect } from '../Calculator/components/CustomSelect/CustomSelect';
+import { CustomSelect, ISelectItem } from '../Calculator/components/CustomSelect/CustomSelect';
 import { Title } from '../TitleofSection/Title';
 // import airplaneImg from '../Calculator/images/calculator.png';
-import { useState } from 'react';
+import { Calculate } from './Calculate';
+import { CalculatorButton } from './components/CalculatorButton';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { Form } from 'react-router-dom';
+import { ValuePrinter } from './components/ValuePrinter';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../../../app/store';
+import { changeResult } from '../../redux/homePageSlice';
+
 const options = [{ value: 'Türkiyə', label: 'Türkiyə' }];
 const units = [
-  { value: 'kq', label: 'kq' },
-  { value: 'q', label: 'q' },
+  { value: 'kg', label: 'kg' },
+  { value: 'g', label: 'g' },
 ];
+export type CalculateFormData = {
+  country: ISelectItem;
+  length: number;
+  width: number;
+  height: number;
+  unitWeight: ISelectItem;
+  weight: number;
+};
 
 export const Calculator = () => {
-  const [result, setResult] = useState(0);
-  
-  // const handleSubmit = event => {
+  const calculatorState = useSelector((state: RootState) => state.homePage);
+  const dispatch = useDispatch();
+  const calculateHandler = () => dispatch(setCalculationResult());
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<CalculateFormData>();
 
-  //   event.preventDefault();
-
-  // const calculate = () => {
-  //   setResult(result + 1);
-  // };
+  const onSubmit: SubmitHandler<CalculateFormData> = (data) => {
+    dispatch(
+      changeResult(
+        Calculate(
+          data.length,
+          data.width,
+          data.height,
+          data.weight,
+          data.unitWeight.value,
+          data.country.value,
+        ),
+      ),
+    );
+  };
   return (
-    <section id="calculator" data-aos>
+    <section id="calculator">
       <div className="myContainer">
         <Title value="KALKULYATOR" isWhite />
         <div className="summary">
@@ -34,36 +65,89 @@ export const Calculator = () => {
         <div className="flex-row">
           <div className="form-container">
             <p>Ölkə, çəki məlumatlarını daxil edin və HESABLA düyməsinə sıxın.</p>
-            <form>
-              <CustomSelect options={options} label="Ölkə:" />
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <Controller
+                name="country"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => <CustomSelect options={options} label="Ölkə:" {...field} />}
+              />
+              {errors.country && <p className="errorMsg">Ölkəni seçin..</p>}
               <div className="volume_components">
                 <label>
-                  Uzunluq (sm):
-                  <input type="text" name="length" className="text_input" />
+                  <span>Uzunluq (sm):</span>
+                  <input
+                    type="text"
+                    className="text_input"
+                    {...register('length', {
+                      pattern: {
+                        value: /^[0-9]+$/,
+                        message: 'Please enter a number',
+                      },
+                    })}
+                  />
+                  {errors.length && <p className="errorMsg">Məhsulun uzunluğunu düzgün daxil edin..</p>}
                 </label>
                 <label className="central">
-                  Eni (sm):
-                  <input type="text" name="width" className="text_input" />
+                  <span>Eni (sm):</span>
+                  <input
+                    type="text"
+                    className="text_input"
+                    {...register('width', {
+                      pattern: {
+                        value: /^[0-9]+$/,
+                        message: 'Please enter a number',
+                      },
+                    })}
+                  />
+                  {errors.width && <p className="errorMsg">Məhsulun enini düzgün daxil edin..</p>}
                 </label>
                 <label>
-                  Hündürlük (sm):
-                  <input type="text" name="height" className="text_input" />
+                  <span>Hündürlük (sm):</span>
+                  <input
+                    type="text"
+                    className="text_input"
+                    {...register('height', {
+                      pattern: {
+                        value: /^[0-9]+$/,
+                        message: 'Please enter a number',
+                      },
+                    })}
+                  />
+                  {errors.height && <p className="errorMsg">Məhsulun hündürlüyünü düzgün daxil edin..</p>}
                 </label>
               </div>
               <div className="weight">
-                <CustomSelect options={units} label="Çəki vahidi " />
+                <div className="unit">
+                  <Controller
+                    name="unitWeight"
+                    control={control}
+                    rules={{ required: true }}
+                    render={({ field }) => <CustomSelect options={units} label="Çəki vahidi " {...field} />}
+                  />
+                  {errors.unitWeight && <p className="errorMsg">Çəki vahidini seçin..</p>}
+                </div>
                 <div className="weight_container">
                   <label>
-                    Çəki:
-                    <input type="text" name="weight" className="text_input" />
+                    <span>Çəki:</span>
+                    <input
+                      type="text"
+                      className="text_input"
+                      {...register('weight', {
+                        required: 'bla',
+                        pattern: {
+                          value: /^[0-9]+$/,
+                          message: 'Please enter a number',
+                        },
+                      })}
+                    />
+                    {errors.weight && <p className="errorMsg">Çəkini daxil edin..</p>}
                   </label>
                 </div>
               </div>
               <div className="calculation">
-                <div className="result">
-                  <span >$ 0.00</span>
-                </div>
-                <button type='submit'>Hesabla</button>
+                <ValuePrinter resultValue={calculatorState.result} />
+                <CalculatorButton />
               </div>
             </form>
           </div>
@@ -73,3 +157,6 @@ export const Calculator = () => {
     </section>
   );
 };
+function setCalculationResult(): any {
+  throw new Error('Function not implemented.');
+}
