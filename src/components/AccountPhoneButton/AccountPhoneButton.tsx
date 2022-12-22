@@ -12,9 +12,6 @@ export const AccountPhoneButton = () => {
           + Sifariş et
         </a>
       </div>
-      <a href="#" title="" className="return-account control-mobile-menu mobile-show active">
-        Keçidlər
-      </a>
     </>
   );
 };
