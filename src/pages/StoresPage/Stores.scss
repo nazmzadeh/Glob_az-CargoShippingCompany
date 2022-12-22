@@ -1,2 +1,9 @@
-@import '../../variables';
-@import '../../mixins';
+@import "../../variables";
+@import "../../mixins";
+
+.body-inside {
+    background-color: #f8f8f8;
+}
+.faq{
+    display: flex;
+}
