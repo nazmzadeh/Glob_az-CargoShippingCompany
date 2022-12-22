@@ -8,7 +8,7 @@ interface ISelectProps extends ControllerRenderProps {
   label: string;
   options: ISelectItem[];
 }
-interface ISelectItem {
+export interface ISelectItem {
   value: string;
   label: string;
 }

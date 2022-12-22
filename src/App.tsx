@@ -1,4 +1,5 @@
 import './App.css';
+import { Confidentiality } from './pages/ConfidentialityPage/Confidentiality';
 import { Footer } from './pages/Footer/Footer';
 import { Header } from './pages/Header/Header';
 import { Home } from './pages/HomePage/Home';
@@ -6,7 +7,6 @@ import { Route, Routes } from 'react-router-dom';
 import { Stores } from './pages/StoresPage/Stores';
 import { Tariffs } from './pages/TariffsPage/Tariffs';
 import React from 'react';
-import { Confidentiality } from './pages/ConfidentialityPage/Confidentiality';
 function App() {
   return (
     <div className="App">

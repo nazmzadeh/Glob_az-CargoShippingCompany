@@ -25,6 +25,10 @@
         color: $main_color;
         font-size: 1.2rem;
       }
+      .errorMsg{
+        color: red;
+        font-size: 0.8rem;
+      }
       span{
         color: $text-color;
       }
@@ -39,6 +43,9 @@
       .weight {
         margin-top: 30px;
         display: flex;
+        .unit{
+          width: 50%;
+        }
         .weight_container {
           margin-left: 35px;
           label {
@@ -117,6 +124,9 @@
             display: block;
         }
         .weight{
+          .unit{
+            width: 100%;
+          }
             .weight_container{
                 margin: 0;
             }

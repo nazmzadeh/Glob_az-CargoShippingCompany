@@ -7,11 +7,14 @@ export function Calculate(
   country: string,
 ) {
   let lastResult = 0;
-  if (unitWeight === 'kq' && country === 'Türkiyə') {
+  let volumetricWeight = 0;
+  // kg
+  if (unitWeight === 'kg' && country === 'Türkiyə') {
+    volumetricWeight = (length * width * height) / 6000;
+
     if (physicalWeight <= 0.1 && physicalWeight > 0.001) {
       lastResult = 0.7;
     }
-
     if (physicalWeight <= 0.25 && physicalWeight > 0.1) {
       lastResult = 1.95;
     }
@@ -31,7 +34,10 @@ export function Calculate(
       lastResult = 3.5;
     }
   }
-  if (unitWeight === 'q' && country === 'Türkiyə') {
+  // g
+  if (unitWeight === 'g' && country === 'Türkiyə') {
+    volumetricWeight = (length * width * height) / 6;
+
     if (physicalWeight <= 100 && physicalWeight > 1) {
       lastResult = 0.7;
     }
@@ -56,9 +62,12 @@ export function Calculate(
     }
   }
 
-  const volumetricWeight = (length * width * height) / 6000;
   if ((length >= 60 && width >= 60) || (length >= 60 && height >= 60) || (width >= 60 && height >= 60)) {
-    lastResult = volumetricWeight + physicalWeight;
+    if (volumetricWeight > physicalWeight) {
+      lastResult = volumetricWeight / 100;
+    } else {
+      lastResult = physicalWeight / 100;
+    }
   }
   return lastResult;
 }

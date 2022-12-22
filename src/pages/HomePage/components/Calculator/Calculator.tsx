@@ -1,31 +1,55 @@
 import './Calculator.scss';
-import { CustomSelect } from '../Calculator/components/CustomSelect/CustomSelect';
+import { CustomSelect, ISelectItem } from '../Calculator/components/CustomSelect/CustomSelect';
 import { Title } from '../TitleofSection/Title';
 // import airplaneImg from '../Calculator/images/calculator.png';
+import { Calculate } from './Calculate';
 import { CalculatorButton } from './components/CalculatorButton';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { Form } from 'react-router-dom';
 import { ValuePrinter } from './components/ValuePrinter';
-import { useState } from 'react';
-import { Calculate } from './Calculate';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../../../app/store';
+import { changeResult } from '../../redux/homePageSlice';
 
 const options = [{ value: 'Türkiyə', label: 'Türkiyə' }];
 const units = [
-  { value: 'kq', label: 'kq' },
-  { value: 'q', label: 'q' },
+  { value: 'kg', label: 'kg' },
+  { value: 'g', label: 'g' },
 ];
 export type CalculateFormData = {
-  country: string;
+  country: ISelectItem;
   length: number;
   width: number;
   height: number;
-  unitWeight: string;
+  unitWeight: ISelectItem;
   weight: number;
 };
 
 export const Calculator = () => {
-  const { register, handleSubmit, control } = useForm<CalculateFormData>();
-  const onSubmit: SubmitHandler<CalculateFormData> = (data) =>
-    console.log(Calculate(data.length, data.width, data.height, data.weight,data.unitWeight,data.country));
+  const calculatorState = useSelector((state: RootState) => state.homePage);
+  const dispatch = useDispatch();
+  const calculateHandler = () => dispatch(setCalculationResult());
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<CalculateFormData>();
+
+  const onSubmit: SubmitHandler<CalculateFormData> = (data) => {
+    dispatch(
+      changeResult(
+        Calculate(
+          data.length,
+          data.width,
+          data.height,
+          data.weight,
+          data.unitWeight.value,
+          data.country.value,
+        ),
+      ),
+    );
+  };
   return (
     <section id="calculator">
       <div className="myContainer">
@@ -48,37 +72,81 @@ export const Calculator = () => {
                 rules={{ required: true }}
                 render={({ field }) => <CustomSelect options={options} label="Ölkə:" {...field} />}
               />
-
+              {errors.country && <p className="errorMsg">Ölkəni seçin..</p>}
               <div className="volume_components">
                 <label>
                   <span>Uzunluq (sm):</span>
-                  <input type="text" className="text_input" {...register('length', { required: true })} />
+                  <input
+                    type="text"
+                    className="text_input"
+                    {...register('length', {
+                      pattern: {
+                        value: /^[0-9]+$/,
+                        message: 'Please enter a number',
+                      },
+                    })}
+                  />
+                  {errors.length && <p className="errorMsg">Məhsulun uzunluğunu düzgün daxil edin..</p>}
                 </label>
                 <label className="central">
                   <span>Eni (sm):</span>
-                  <input type="text" className="text_input" {...register('width', { required: true })} />
+                  <input
+                    type="text"
+                    className="text_input"
+                    {...register('width', {
+                      pattern: {
+                        value: /^[0-9]+$/,
+                        message: 'Please enter a number',
+                      },
+                    })}
+                  />
+                  {errors.width && <p className="errorMsg">Məhsulun enini düzgün daxil edin..</p>}
                 </label>
                 <label>
                   <span>Hündürlük (sm):</span>
-                  <input type="text" className="text_input" {...register('height', { required: true })} />
+                  <input
+                    type="text"
+                    className="text_input"
+                    {...register('height', {
+                      pattern: {
+                        value: /^[0-9]+$/,
+                        message: 'Please enter a number',
+                      },
+                    })}
+                  />
+                  {errors.height && <p className="errorMsg">Məhsulun hündürlüyünü düzgün daxil edin..</p>}
                 </label>
               </div>
               <div className="weight">
-                <Controller
-                  name="unitWeight"
-                  control={control}
-                  rules={{ required: true }}
-                  render={({ field }) => <CustomSelect options={units} label="Çəki vahidi " {...field} />}
-                />
+                <div className="unit">
+                  <Controller
+                    name="unitWeight"
+                    control={control}
+                    rules={{ required: true }}
+                    render={({ field }) => <CustomSelect options={units} label="Çəki vahidi " {...field} />}
+                  />
+                  {errors.unitWeight && <p className="errorMsg">Çəki vahidini seçin..</p>}
+                </div>
                 <div className="weight_container">
                   <label>
                     <span>Çəki:</span>
-                    <input type="text" className="text_input" {...register('weight', { required: true })} />
+                    <input
+                      type="text"
+                      className="text_input"
+                      {...register('weight', {
+                        required: 'bla',
+                        pattern: {
+                          value: /^[0-9]+$/,
+                          message: 'Please enter a number',
+                        },
+                      })}
+                    />
+                    {errors.weight && <p className="errorMsg">Çəkini daxil edin..</p>}
                   </label>
                 </div>
               </div>
               <div className="calculation">
-                {/* <ValuePrinter resultValue={onSubmit()} /> */}
+                <ValuePrinter resultValue={calculatorState.result} />
                 <CalculatorButton />
               </div>
             </form>
@@ -89,3 +157,6 @@ export const Calculator = () => {
     </section>
   );
 };
+function setCalculationResult(): any {
+  throw new Error('Function not implemented.');
+}

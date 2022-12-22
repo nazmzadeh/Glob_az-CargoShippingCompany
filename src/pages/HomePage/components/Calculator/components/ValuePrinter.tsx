@@ -7,7 +7,7 @@ export const ValuePrinter = (props: IValuePrinterProps) => {
   const { resultValue } = props;
   return (
     <div className="result">
-      {/* <span>$ {lastResult}</span>; */}
+      <span>$ {resultValue}</span>;
     </div>
   );
 };
