@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Step.scss';
-import { Title } from '../TitleofSection/Title';
+import { Title } from '../../../../components/TitleofSection/Title';
 import deliveryIcon from './images/catdirilma-01.svg';
 import deliveryImg from './images/step.svg';
 import orderIcon from './images/nece-sifarish-edim-01-01-1.svg';

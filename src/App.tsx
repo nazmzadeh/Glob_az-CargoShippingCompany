@@ -9,17 +9,17 @@ import { Stores } from './pages/StoresPage/Stores';
 import { Tariffs } from './pages/TariffsPage/Tariffs';
 import React from 'react';
 
-import { OrderingPart } from './components/OrderingPage/OrderingPart';
 import { Beyan } from './components/BeyanEtPart/Beyan';
 import { Cart } from './components/Cart/Cart';
+import { OrderingPart } from './components/OrderingPage/OrderingPart';
 import { Packages } from './components/Packages/Packages';
 
 import { AllNews } from './pages/HomePage/components/News/components/AllNews';
-import { Trenchcoat } from './pages/HomePage/components/News/components/OrderTrenchcoatFromTurk/Trenchcoat';
 import { ChildrensClothing } from './pages/HomePage/components/News/components/ChildrensClothing/ChildrensClothing';
-import { SportClothing } from './pages/HomePage/components/News/components/SportClothing/SportClothing';
+import { FraudCases } from './pages/HomePage/components/News/components/Fraud/FraudCases';
 import { OrderClothing } from './pages/HomePage/components/News/components/OrderClothing/OrderClothing';
-import { FraudCases } from './pages/HomePage/components/News/components/Fraud/ChildrensClothing';
+import { SportClothing } from './pages/HomePage/components/News/components/SportClothing/SportClothing';
+import { Trenchcoat } from './pages/HomePage/components/News/components/OrderTrenchcoatFromTurk/Trenchcoat';
 function App() {
   return (
     <div className="App">
@@ -36,17 +36,17 @@ function App() {
             <Route path="cart-part" element={<Cart />} />
             <Route path="packages-part" element={<Packages />} />
           </Route>
-           <Route path="/all-news" element={<AllNews />} />
-          <Route path="/trench-coat" element={<Trenchcoat/>} />
-          <Route path="/all-news/trench-coat" element={<Trenchcoat/>} />
-          <Route path="/ushaq-geyimleri" element={<ChildrensClothing/>} />
-          <Route path="/all-news/ushaq-geyimleri" element={<ChildrensClothing/>} />
-          <Route path="/idman-geyimleri" element={<SportClothing/>} />
-          <Route path="/all-news/idman-geyimleri" element={<SportClothing/>} />
-          <Route path="/paltar-sifarishi" element={<OrderClothing/>} />
-          <Route path="/all-news/paltar-sifarishi" element={<OrderClothing/>} />
-          <Route path="/all-news/firildaqchiliq" element={<FraudCases/>} />
-          <Route path="/all-news/firildaqchiliq" element={<FraudCases/>} />
+          <Route path="/all-news" element={<AllNews />} />
+          <Route path="/trench-coat" element={<Trenchcoat />} />
+          <Route path="/all-news/trench-coat" element={<Trenchcoat />} />
+          <Route path="/ushaq-geyimleri" element={<ChildrensClothing />} />
+          <Route path="/all-news/ushaq-geyimleri" element={<ChildrensClothing />} />
+          <Route path="/idman-geyimleri" element={<SportClothing />} />
+          <Route path="/all-news/idman-geyimleri" element={<SportClothing />} />
+          <Route path="/paltar-sifarishi" element={<OrderClothing />} />
+          <Route path="/all-news/paltar-sifarishi" element={<OrderClothing />} />
+          <Route path="/all-news/firildaqchiliq" element={<FraudCases />} />
+          <Route path="/all-news/firildaqchiliq" element={<FraudCases />} />
         </Routes>
       </main>
       <Footer />

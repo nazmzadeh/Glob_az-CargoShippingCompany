@@ -1,12 +1,12 @@
 import './Shops.scss';
-import { Title } from '../TitleofSection/Title';
+import { Title } from '../../../../components/TitleofSection/Title';
 import React from 'react';
 import Slider from 'react-slick';
 import slick_img_1 from './images/mlogo.png';
 import slick_img_2 from './images/mlogo2.jpg';
 import slick_img_3 from './images/mlogo4.png';
 import slick_img_4 from './images/mlogo5.jpg';
-import slick_img_5 from './images/mlogo6.jpg';
+import slick_img_5 from './images/Без названия.jpeg';
 import slick_img_6 from './images/mlogo9.png';
 import slick_img_7 from './images/mlogo10.png';
 import slick_img_8 from './images/mlogo11.jpg';
@@ -35,7 +35,7 @@ const items = [
   },
   {
     id: 5,
-    link: 'https://www.pierrecardin.com.tr/?redirected_by=bon.az&utm_source=performics&utm_medium=affiliate&utm_campaign=cps&utm_term=23738&pfx=1021978c76ecb5f9dfd45df48209ae&utm_content=1021978c76ecb5f9dfd45df48209ae',
+    link: 'https://www.pierrecardin.com.tr/',
     image: slick_img_5,
   },
   {

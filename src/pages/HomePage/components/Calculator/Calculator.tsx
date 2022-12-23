@@ -1,6 +1,6 @@
 import './Calculator.scss';
 import { CustomSelect, ISelectItem } from '../Calculator/components/CustomSelect/CustomSelect';
-import { Title } from '../TitleofSection/Title';
+import { Title } from '../../../../components/TitleofSection/Title';
 // import airplaneImg from '../Calculator/images/calculator.png';
 import { Calculate } from './Calculate';
 import { CalculatorButton } from './components/CalculatorButton';

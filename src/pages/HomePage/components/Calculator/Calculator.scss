@@ -110,6 +110,11 @@
 @media screen and (max-width: 660px) {
   #calculator {
     .myContainer {
+      label{
+        width: 100%;
+      
+      }
+ 
       img {
         display: none;
       }
@@ -119,6 +124,12 @@
         margin: 0 auto;
         input {
             width: 100%;
+        }
+        .volume_components{
+          margin: 0;
+          label.central{
+            margin: 0px 0px;
+          }
         }
         .volume_components,.weight{
             display: block;
@@ -132,6 +143,11 @@
             }
         }
         
+      }
+      .summary{
+        p{
+          font-size: 13px;
+        }
       }
     }
   }

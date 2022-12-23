@@ -1,8 +1,9 @@
 @import '../../../../variables';
 
 .shops{
-    min-height: 160px;
-    .slick_container{
+    min-height: 280px;
+    text-align: center;
+        .slick_container{
         margin: 0 auto;
         font-family: $main_font;
         max-width: 1400px;
