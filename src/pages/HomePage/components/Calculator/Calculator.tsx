@@ -11,14 +11,6 @@ const units = [
 
 export const Calculator = () => {
   const [result, setResult] = useState(0);
-  
-  // const handleSubmit = event => {
-
-  //   event.preventDefault();
-
-  // const calculate = () => {
-  //   setResult(result + 1);
-  // };
   return (
     <section id="calculator" data-aos>
       <div className="myContainer">

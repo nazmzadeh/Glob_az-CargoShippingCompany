@@ -1,7 +1,7 @@
 import './Home.scss';
 import { Calculator } from './components/Calculator/Calculator';
 import { HeroSlider, ISlide } from './components/Hero-Slider/HeroSlider';
-import { ICard, News } from './components/News/News';
+import { News } from './components/News/News';
 import { Shops } from './components/Shops/Shops';
 import { Step } from './components/Step/Step';
 import slideImg1 from './components/Hero-Slider/images/sliderglobbi.png';
@@ -14,51 +14,11 @@ import cardImg5 from './components/News/components/images/b3-1.jpg';
 import cardImg6 from './components/News/components/images/b1-1.jpg';
 import cardImg7 from './components/News/components/images/Untitled-3.png';
 import { AllNews } from './components/News/components/AllNews';
-
-export const cards: ICard[] = [
-  {
-    id: 1,
-    header: 'Türkiyədən trençkot sifarişi',
-    date: '10.10.2022',
-    imageSrc: cardImg1,
-  },
-  {
-    id: 2,
-    header: 'Türkiyədən uşaq geyimlərinin sifarişi',
-    date: '10.10.2022',
-    imageSrc: cardImg2,
-  },
-  {
-    id: 3,
-    header: 'Trendyoldan idman geyimlərinin sifarişi',
-    date: '22.09.2022',
-    imageSrc: cardImg3,
-  },
-  {
-    id: 4,
-    header: 'Trendyoldan idman geyimlərinin sifarişi',
-    date: '22.09.2022',
-    imageSrc: cardImg4,
-  },
-  {
-    id: 5,
-    header: 'Trendyoldan idman geyimlərinin sifarişi',
-    date: '22.09.2022',
-    imageSrc: cardImg5,
-  },
-  {
-    id: 6,
-    header: 'Trendyoldan idman geyimlərinin sifarişi',
-    date: '22.09.2022',
-    imageSrc: cardImg6,
-  },
-  {
-    id: 7,
-    header: 'Trendyoldan idman geyimlərinin sifarişi',
-    date: '22.09.2022',
-    imageSrc: cardImg7,
-  },
-];
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../app/store';
+import { useEffect } from 'react';
+import { baseUrl } from '../../constants';
+import { setNews } from './redux/homePageSlice';
 export const Home = () => {
   let slideItems: ISlide[] = [
     {
@@ -83,7 +43,7 @@ export const Home = () => {
       <HeroSlider slides={slideItems} />
       <Step />
       <Calculator />
-      <News cards={cards} />
+      <News />
       <Shops />
     </>
   );

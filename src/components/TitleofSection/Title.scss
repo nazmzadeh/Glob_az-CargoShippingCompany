@@ -1,8 +1,23 @@
 h2{
     font-size: 2rem;
     font-weight: 700;
-    padding-top: 55px;
-
+    padding-top: 50px;
+    position: relative;
+    &::after{
+        content: "";
+        width: 4rem;
+        height: 0.2rem;
+        background: #ffa600;
+        position: absolute;
+        bottom: -1.33333rem;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        border-radius: 3px;
+    }
 }
 .title_white{
     color: white;
