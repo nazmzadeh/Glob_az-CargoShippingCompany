@@ -1,1 +1,1 @@
-export const baseUrl = 'http://localhost:3010';
+export const baseUrl = 'https://test-red-gamma-11.vercel.app';
